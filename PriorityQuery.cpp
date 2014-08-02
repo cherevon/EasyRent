@@ -1,5 +1,7 @@
 #include "PriorityQuery.h"
 
+QList<AbstractQuery*> PQs; // set of current user`s priority query
+
 QMap<QString, int> PriorityQuery::defaultColumnSequence = AbstractQuery::defaultColumnSequence;
 
 const QString PriorityQuery::CREATE_TIME_SIGN   = "CreateTimeField";

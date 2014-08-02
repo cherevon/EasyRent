@@ -13,20 +13,18 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-    FormPriorityShow.cpp \
-    MainForm.cpp \
     PropertyStorage.cpp \
     FormPriorityCreate.cpp \
     GlobalDataManager.cpp \
     PriorityQuery.cpp \
     AbstractQuery.cpp \
     ResponseQuery.cpp \
-    Tools/ContainerUtils.cpp
+    Tools/ContainerUtils.cpp \
+    MainWindow.cpp \
+    FormPriorityShow.cpp
 
 HEADERS  += \
     Queries.h \
-    MainForm.h \
-    FormPriorityShow.h \
     PropertyStorage.h \
     FormPriorityCreate.h \
     GlobalDataManager.h \
@@ -34,6 +32,12 @@ HEADERS  += \
     AbstractQuery.h \
     ResponseQuery.h \
     Tools/ContainerUtils.h \
-    Tools/Interfaces.h
+    MainWindow.h \
+    FormPriorityShow.h
 
-FORMS    +=
+FORMS    += \
+    FormPriorityShow.ui \
+    MainWindow.ui
+
+RESOURCES += \
+    resources.qrc

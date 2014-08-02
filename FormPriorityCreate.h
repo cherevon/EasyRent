@@ -14,7 +14,6 @@
 #include <QLineEdit>
 #include <QtAlgorithms>
 #include <math.h>
-#include "GlobalDataManager.h"
 #include "Queries.h"
 
 class FormPriorityCreate : public QWidget

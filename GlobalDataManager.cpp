@@ -96,20 +96,6 @@ GlobalDataManager::GlobalDataManager()
     fMetros["Чернышевская"]         = 0;
     fMetros["Чкаловская"]           = 0;
     fMetros["Электросила"]          = 0;
-
-    // загрузка приоритетных запросов
-    QFile PQFile("I:\\priorities.pq");
-    if (PQFile.open(QIODevice::ReadOnly))
-    {
-        PriorityQuery* NewPQ;
-        while (!PQFile.atEnd())
-        {
-            NewPQ = new PriorityQuery();
-            NewPQ->readBinary(PQFile);
-            fPQs.push_back(NewPQ);
-        }
-        PQFile.close();
-    }
 }
 
 /*============================================================================================*/
@@ -117,14 +103,14 @@ GlobalDataManager::GlobalDataManager()
 GlobalDataManager::~GlobalDataManager()
 {
     // сохранение приоритетных запросов
-    QFile PQFile("I:\\priorities.pq");
-    if (PQFile.open(QIODevice::WriteOnly))
-    {
-        QList<AbstractQuery*>::iterator iter;
-        for(iter = fPQs.begin(); iter != fPQs.end(); ++iter)
-            (*iter)->writeBinary(PQFile);
-        PQFile.close();
-    }
+//    QFile PQFile("I:\\priorities.pq");
+//    if (PQFile.open(QIODevice::WriteOnly))
+//    {
+//        QList<AbstractQuery*>::iterator iter;
+//        for(iter = fPQs.begin(); iter != fPQs.end(); ++iter)
+//            (*iter)->writeBinary(PQFile);
+//        PQFile.close();
+//    }
 }
 
 /*============================================================================================*/
@@ -155,9 +141,9 @@ QStringList GlobalDataManager::availableMetros()
 
 /*============================================================================================*/
 
-QList<AbstractQuery *> &GlobalDataManager::PQs()
-{
-    return fPQs;
-}
+//QList<AbstractQuery *> &GlobalDataManager::PQs()
+//{
+//    return fPQs;
+//}
 
 /*============================================================================================*/

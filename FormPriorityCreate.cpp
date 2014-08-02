@@ -10,7 +10,7 @@ FormPriorityCreate::FormPriorityCreate(QWidget *parent) :
 
 /*==========================================================================================================*/
 
-FormPriorityCreate::FormPriorityCreate(PriorityQuery *PQ, QWidget *parent)
+FormPriorityCreate::FormPriorityCreate(PriorityQuery *PQ, QWidget *parent) : QWidget(parent)
 // создание окна "Редактировать приоритетный запрос"
 {
     // если приоритетный запрос не задан, то выходим
@@ -164,8 +164,8 @@ void FormPriorityCreate::createWndComponents()
 
     // список районов, стоимость, контакт, адрес, доп инфо - НАЧАЛО
         lwAreas = new QListWidget(this);
-        QStringList Areas = GlobalDataManager::Instance.availableAreas();
-        lwAreas->addItems(Areas);
+//        QStringList Areas = GlobalDataManager::Instance.availableAreas();
+//        lwAreas->addItems(Areas);
         lwAreas->setSelectionMode(QAbstractItemView::MultiSelection);
 
         int IntMax = round( pow(2, sizeof(int)*8 - 2));
@@ -183,8 +183,8 @@ void FormPriorityCreate::createWndComponents()
 
     // список станций метро - НАЧАЛО
         lwMetros = new QListWidget(this);
-        QStringList Metros = GlobalDataManager::Instance.availableMetros();
-        lwMetros->addItems(Metros);
+//        QStringList Metros = GlobalDataManager::Instance.availableMetros();
+//        lwMetros->addItems(Metros);
         lwMetros->setSelectionMode(QAbstractItemView::MultiSelection);
         lwMetros->setLayoutMode(QListView::Batched);
     // список станций метро - КОНЕЦ
@@ -287,12 +287,12 @@ void FormPriorityCreate::bCreatePQPressed()
 
     // если приоритетный запрос действительно новый, то добавляем его
     //if (qFind(GlobalDataManager::Instance.PQs(), NewPQ) != GlobalDataManager::Instance.PQs().end())
-    if (GlobalDataManager::Instance.PQs().indexOf(NewPQ) == -1)
-    {
-        GlobalDataManager::Instance.PQs().push_front(NewPQ);
-        // вызываем сигнал, что был создан новый приоритетный запрос
-        emit newPQCreated();
-    }
+//    if (GlobalDataManager::Instance.PQs().indexOf(NewPQ) == -1)
+//    {
+//        GlobalDataManager::Instance.PQs().push_front(NewPQ);
+//        // вызываем сигнал, что был создан новый приоритетный запрос
+//        emit newPQCreated();
+//    }
 }
 
 /*==========================================================================================================*/

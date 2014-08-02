@@ -1,4 +1,4 @@
-#include "MainForm.h"
+#include "MainWindow.h"
 #include "Queries.h"
 #include <QApplication>
 #include <QtGui>
@@ -6,7 +6,7 @@
 #include <QMap>
 #include "GlobalDataManager.h"
 
-//------------------------------------------------------------
+extern QList<AbstractQuery*> PQs;
 
 int main(int argc, char *argv[])
 {
@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
     QApplication::setApplicationDisplayName("EasyRent");
     QApplication::setOrganizationName("Grad Petra");
     QApplication::setApplicationName("EasyRent");
-    MainForm FormMain;
+    MainWindow FormMain;
     FormMain.show();
 
     return a.exec();
