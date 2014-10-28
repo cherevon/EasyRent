@@ -21,7 +21,8 @@ SOURCES += main.cpp\
     ResponseQuery.cpp \
     Tools/ContainerUtils.cpp \
     MainWindow.cpp \
-    FormPriorityShow.cpp
+    FormPriorityShow.cpp \
+    AppInfo.cpp
 
 HEADERS  += \
     Queries.h \
@@ -33,7 +34,9 @@ HEADERS  += \
     ResponseQuery.h \
     Tools/ContainerUtils.h \
     MainWindow.h \
-    FormPriorityShow.h
+    FormPriorityShow.h \
+    Interfaces.h \
+    AppInfo.h
 
 FORMS    += \
     FormPriorityShow.ui \

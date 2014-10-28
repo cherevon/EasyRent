@@ -40,7 +40,7 @@ public:
     QDateTime       createTime()         const                  {return fCreateTime;}
     ObjType         searchObjectType()   const                  {return fObjectType;}
     QDateTime       lastSearchTime()     const                  {return fLastSearch;}
-    QSet<QString>&  eMails()                                    {return fEMails;}
+    QSet<QString>   eMails()             const                  {return fEMails;}
     void            setCreateTime(const QDateTime Value)        {fCreateTime = Value;}
     void            setSearchObjectType(const ObjType Value)    {fObjectType = Value;}
     void            setLastSearchTime(const QDateTime Value)    {fLastSearch = Value;}

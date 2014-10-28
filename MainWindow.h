@@ -4,12 +4,13 @@
 #include <QMainWindow>
 #include <QSet>
 #include "FormPriorityShow.h"
+#include "Interfaces.h"
 
 namespace Ui {
 class MainWindow;
 }
 
-class MainWindow : public QMainWindow
+class MainWindow : public QMainWindow, public IMainWindow
 {
     Q_OBJECT
 
@@ -17,11 +18,16 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
-    void addWindow(QWidget *pwgt); // insert new widget into QTabWidget
+    /*IMainForm*/
+    void addUserWindow(QWidget* pwgt);
+    void addToolbarAction(QAction* pAct);
+
 
 private:
     QList<QWidget*> fOpenedWindows; // a list of all windows which are currently opened
     Ui::MainWindow *ui;
+
+    void extractWindowControls(IControlExtractor* pwgt); // extracts controls from pwgt
 
 protected:
     virtual void connectEvents(); // connecting signals and slots of this window

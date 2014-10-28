@@ -81,8 +81,8 @@ public:
     bool            hasArea(QString Area)   const           {return (fAreas.find(Area) != fAreas.end());}
     bool            hasMetro(QString Metro) const           {return (fMetros.find(Metro) != fMetros.end());}
 
-    QSet<QString>&  areas()                                 {return fAreas;}
-    QSet<QString>&  metros()                                {return fMetros;}
+    QSet<QString>   areas() const                           {return fAreas;}
+    QSet<QString>   metros() const                          {return fMetros;}
 
     void            setQueryType(const QueryType Value)     {fType      = Value;}
     void            setRooms(const uint Value)              {fRooms     = Value;}

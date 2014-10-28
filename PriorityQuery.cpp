@@ -9,30 +9,6 @@ const QString PriorityQuery::OBJECT_TYPE_SIGN   = "ObjectTypeField";
 const QString PriorityQuery::LAST_SEARCH_SIGN   = "LastSearchField";
 const QString PriorityQuery::EMAILS_SIGN        = "EMailsField";
 
-struct InitPQ
-{
-    InitPQ()
-    {
-        // порядок размещения полей запроса по умолчанию
-        PriorityQuery::defaultColumnSequence[PriorityQuery::CREATE_TIME_SIGN]      = 0;
-        PriorityQuery::defaultColumnSequence[PriorityQuery::QUERY_TYPE_SIGN]       = 1;
-        PriorityQuery::defaultColumnSequence[PriorityQuery::OBJECT_TYPE_SIGN]      = 2;
-        PriorityQuery::defaultColumnSequence[PriorityQuery::LAST_SEARCH_SIGN]      = 3;
-        PriorityQuery::defaultColumnSequence[PriorityQuery::ROOMS_SIGN]            = 4;
-        PriorityQuery::defaultColumnSequence[PriorityQuery::AREAS_SIGN]            = 5;
-        PriorityQuery::defaultColumnSequence[PriorityQuery::METROS_SIGN]           = 6;
-        PriorityQuery::defaultColumnSequence[PriorityQuery::ADDRESS_SIGN]          = 7;
-        PriorityQuery::defaultColumnSequence[PriorityQuery::FURNITURE_SIGN]        = 8;
-        PriorityQuery::defaultColumnSequence[PriorityQuery::WASHER_SIGN]           = 9;
-        PriorityQuery::defaultColumnSequence[PriorityQuery::TELEPHONE_SIGN]        = 10;
-        PriorityQuery::defaultColumnSequence[PriorityQuery::FRIDGE_SIGN]           = 11;
-        PriorityQuery::defaultColumnSequence[PriorityQuery::PRICE_SIGN]            = 12;
-        PriorityQuery::defaultColumnSequence[PriorityQuery::PERIOD_SIGN]           = 13;
-        PriorityQuery::defaultColumnSequence[PriorityQuery::CONTACT_SIGN]          = 14;
-        PriorityQuery::defaultColumnSequence[PriorityQuery::ADDITIONAL_INFO_SIGN]  = 15;
-    }
-} initPQ;
-
 /*====================================================================================================================*/
 
 PriorityQuery::PriorityQuery(): AbstractQuery()
