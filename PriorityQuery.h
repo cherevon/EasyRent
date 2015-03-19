@@ -24,15 +24,6 @@ private:
     QSet<QString>   fEMails;        // перечень адресов электронной почты для рассылки результатов поиска
 
 public:
-    // порядок отображения полей запроса по умолчанию
-    static QMap<QString, int> defaultColumnSequence;
-
-    // наименования полей для поиска по ассоциативному массиву
-    static const QString    CREATE_TIME_SIGN;
-    static const QString    OBJECT_TYPE_SIGN;
-    static const QString    LAST_SEARCH_SIGN;
-    static const QString    EMAILS_SIGN;
-
     // CONSTRUCTORS
     PriorityQuery();
 
@@ -48,13 +39,6 @@ public:
     // OPERATORS
     bool operator ==(const PriorityQuery& Q);
     PriorityQuery& operator =(const PriorityQuery& Q);
-    friend QDataStream& operator <<(QDataStream& stream, const PriorityQuery& Q);
-    friend QDataStream& operator >>(QDataStream& stream, PriorityQuery& Q);
-
-    // METHODS
-    virtual void readBinary(QFile &f);
-    virtual void writeBinary(QFile &f) const;
-    virtual bool writeInTableWidget(QTableWidget *table, const int row, const QMap<QString, int> *pColumnNames = NULL) const;
 };
 
 /*====================================================================================================================*/

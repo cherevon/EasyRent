@@ -88,30 +88,3 @@ void MainWindow::addToolbarAction(QAction *pAct)
 }
 
 /*======================================================================================================================*/
-
-void MainWindow::loadPQs()
-// load priority queries from file
-{
-    QFile PQFile("C:\\Projects\\priorities.pq");
-    if (PQFile.open(QIODevice::ReadOnly))
-    {
-        PriorityQuery* NewPQ;
-        while (!PQFile.atEnd())
-        {
-            NewPQ = new PriorityQuery();
-            NewPQ->readBinary(PQFile);
-            PQs.push_back(NewPQ);
-        }
-        PQFile.close();
-    }
-}
-
-/*======================================================================================================================*/
-
-void MainWindow::savePQs()
-// save priority queries to file
-{
-
-}
-
-/*======================================================================================================================*/

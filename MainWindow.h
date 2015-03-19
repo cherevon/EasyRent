@@ -35,8 +35,6 @@ protected:
 
 public slots:
     void showPQs(); // open the window with user`s priority queries
-    void loadPQs(); // load priority queries from file
-    void savePQs(); // save priority queries to file
 };
 
 #endif // MAINWINDOW_H

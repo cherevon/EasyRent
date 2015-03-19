@@ -5,6 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui
+QT       += sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -14,7 +15,6 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
     PropertyStorage.cpp \
-    FormPriorityCreate.cpp \
     GlobalDataManager.cpp \
     PriorityQuery.cpp \
     AbstractQuery.cpp \
@@ -22,12 +22,12 @@ SOURCES += main.cpp\
     Tools/ContainerUtils.cpp \
     MainWindow.cpp \
     FormPriorityShow.cpp \
-    AppInfo.cpp
+    AppInfo.cpp \
+    FormPriorityCreate.cpp
 
 HEADERS  += \
     Queries.h \
     PropertyStorage.h \
-    FormPriorityCreate.h \
     GlobalDataManager.h \
     PriorityQuery.h \
     AbstractQuery.h \
@@ -36,11 +36,13 @@ HEADERS  += \
     MainWindow.h \
     FormPriorityShow.h \
     Interfaces.h \
-    AppInfo.h
+    AppInfo.h \
+    FormPriorityCreate.h
 
 FORMS    += \
     FormPriorityShow.ui \
-    MainWindow.ui
+    MainWindow.ui \
+    FormPriorityCreate.ui
 
 RESOURCES += \
     resources.qrc

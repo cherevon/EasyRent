@@ -75,12 +75,8 @@ void FormPriorityShow::appendPQ(const PriorityQuery * const PQ)
     ui->PQTable->setItem(ui->PQTable->rowCount() - 1, fMetrosColumn, newCell);
 
     // rooms
-    newCell = new QTableWidgetItem( QString::number( PQ->rooms() ) );
+    newCell = new QTableWidgetItem( QString::number( PQ->roomCount() ) );
     ui->PQTable->setItem(ui->PQTable->rowCount() - 1, fRoomsColumn, newCell);
-
-    // address
-    newCell = new QTableWidgetItem(PQ->address());
-    ui->PQTable->setItem(ui->PQTable->rowCount() - 1, fAddressColumn, newCell);
 
     // furniture
     newCell = new QTableWidgetItem( PQ->hasFurniture()?"+":"-" );
@@ -99,16 +95,12 @@ void FormPriorityShow::appendPQ(const PriorityQuery * const PQ)
     ui->PQTable->setItem(ui->PQTable->rowCount() - 1, fFridgeColumn, newCell);
    
     // price
-    newCell = new QTableWidgetItem( QString::number(PQ->price()) + " руб." );
+    newCell = new QTableWidgetItem( QString::number(PQ->basePrice()) + " руб." );
     ui->PQTable->setItem(ui->PQTable->rowCount() - 1, fPriceColumn, newCell);
 
     // period
     newCell = new QTableWidgetItem( (PQ->period() >= 12)?"Длительный":QString::number(PQ->period()) );
     ui->PQTable->setItem(ui->PQTable->rowCount() - 1, fPeriodColumn, newCell);
-
-    // contact
-    newCell = new QTableWidgetItem( PQ->contact() );
-    ui->PQTable->setItem(ui->PQTable->rowCount() - 1, fContactColumn, newCell);
 
     // additional information
     newCell = new QTableWidgetItem( PQ->additionalInfo() );
