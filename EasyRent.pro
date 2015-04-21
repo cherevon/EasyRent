@@ -15,11 +15,9 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
     PropertyStorage.cpp \
-    GlobalDataManager.cpp \
     PriorityQuery.cpp \
     AbstractQuery.cpp \
     ResponseQuery.cpp \
-    Tools/ContainerUtils.cpp \
     MainWindow.cpp \
     FormPriorityShow.cpp \
     AppInfo.cpp \
@@ -28,11 +26,9 @@ SOURCES += main.cpp\
 HEADERS  += \
     Queries.h \
     PropertyStorage.h \
-    GlobalDataManager.h \
     PriorityQuery.h \
     AbstractQuery.h \
     ResponseQuery.h \
-    Tools/ContainerUtils.h \
     MainWindow.h \
     FormPriorityShow.h \
     Interfaces.h \

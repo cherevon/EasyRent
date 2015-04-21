@@ -8,7 +8,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    ui->dateToday->setDateTime(QDateTime::currentDateTime());
 
     fillStatusBar();
     connectEvents();
@@ -26,8 +25,7 @@ MainWindow::~MainWindow()
 void MainWindow::fillStatusBar()
 // fill status bar with widgets
 {
-    ui->dateToday->adjustSize();
-    ui->statusbar->addWidget(ui->dateToday);
+
 }
 
 /*======================================================================================================================*/
@@ -69,7 +67,7 @@ void MainWindow::extractWindowControls(IControlExtractor *pwgt)
 void MainWindow::addUserWindow(QWidget *pwgt)
 // insert new widget into QTabWidget
 {
-    ui->tabWidget->addTab(pwgt, pwgt->windowTitle());
+//    ui->tabWidget->addTab(pwgt, pwgt->windowTitle());
     // remember new window as currently opened and refresh Window menu
     fOpenedWindows.push_back(pwgt);
 

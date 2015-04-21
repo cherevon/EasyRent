@@ -30,64 +30,6 @@
     <property name="bottomMargin">
      <number>0</number>
     </property>
-    <item>
-     <widget class="QTabWidget" name="tabWidget">
-      <property name="documentMode">
-       <bool>true</bool>
-      </property>
-     </widget>
-    </item>
-    <item alignment="Qt::AlignLeft">
-     <widget class="QDateEdit" name="dateToday">
-      <property name="enabled">
-       <bool>true</bool>
-      </property>
-      <property name="font">
-       <font>
-        <family>Monotype Corsiva</family>
-        <pointsize>14</pointsize>
-        <italic>false</italic>
-       </font>
-      </property>
-      <property name="autoFillBackground">
-       <bool>false</bool>
-      </property>
-      <property name="wrapping">
-       <bool>false</bool>
-      </property>
-      <property name="frame">
-       <bool>false</bool>
-      </property>
-      <property name="readOnly">
-       <bool>true</bool>
-      </property>
-      <property name="buttonSymbols">
-       <enum>QAbstractSpinBox::NoButtons</enum>
-      </property>
-      <property name="accelerated">
-       <bool>false</bool>
-      </property>
-      <property name="showGroupSeparator" stdset="0">
-       <bool>false</bool>
-      </property>
-      <property name="currentSection">
-       <enum>QDateTimeEdit::DaySection</enum>
-      </property>
-      <property name="displayFormat">
-       <string>dd MMMM yyyy</string>
-      </property>
-      <property name="calendarPopup">
-       <bool>false</bool>
-      </property>
-      <property name="date">
-       <date>
-        <year>2014</year>
-        <month>7</month>
-        <day>21</day>
-       </date>
-      </property>
-     </widget>
-    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -96,7 +38,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">
@@ -131,6 +73,33 @@
     <bool>false</bool>
    </attribute>
   </widget>
+  <widget class="QDockWidget" name="dockTasks">
+   <property name="windowTitle">
+    <string>Задачи</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_2">
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+    </layout>
+   </widget>
+  </widget>
   <action name="actShowPQs">
    <property name="icon">
     <iconset resource="resources.qrc">
@@ -158,7 +127,7 @@
   <action name="actExit">
    <property name="icon">
     <iconset resource="resources.qrc">
-     <normaloff>:/img/quit.ico</normaloff>:/img/quit.ico</iconset>
+     <normaloff>:/img/Exit.ico</normaloff>:/img/Exit.ico</iconset>
    </property>
    <property name="text">
     <string>Выход</string>

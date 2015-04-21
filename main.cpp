@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     QApplication::setApplicationDisplayName("EasyRent");
-    QApplication::setOrganizationName("Grad Petra");
+//    QApplication::setOrganizationName("Grad Petra");
     QApplication::setApplicationName("EasyRent");
 
     QSqlDatabase db = QSqlDatabase::addDatabase("QODBC");
