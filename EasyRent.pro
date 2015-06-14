@@ -21,7 +21,9 @@ SOURCES += main.cpp\
     MainWindow.cpp \
     FormPriorityShow.cpp \
     AppInfo.cpp \
-    FormPriorityCreate.cpp
+    FormPriorityCreate.cpp \
+    AuthWidget.cpp \
+    AuthUnit.cpp
 
 HEADERS  += \
     Queries.h \
@@ -33,12 +35,15 @@ HEADERS  += \
     FormPriorityShow.h \
     Interfaces.h \
     AppInfo.h \
-    FormPriorityCreate.h
+    FormPriorityCreate.h \
+    AuthWidget.h \
+    AuthUnit.h
 
 FORMS    += \
     FormPriorityShow.ui \
     MainWindow.ui \
-    FormPriorityCreate.ui
+    FormPriorityCreate.ui \
+    AuthWidget.ui
 
 RESOURCES += \
     resources.qrc

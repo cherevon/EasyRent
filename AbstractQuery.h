@@ -7,7 +7,6 @@
 #include <QFile>
 #include <QDataStream>
 #include <QTableWidget>
-#include "Tools/ContainerUtils.h"
 
 /*====================================================================================================================*/
 

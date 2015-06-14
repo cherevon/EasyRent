@@ -2,38 +2,31 @@
 #include "Queries.h"
 #include <QApplication>
 #include <QtGui>
-#include <QFile>
-#include <QMap>
-#include "GlobalDataManager.h"
 #include "AppInfo.h"
 #include <QSqlDatabase>
 #include <QMessageBox>
-#include <QException>
-#include <QDebug>
+#include "AuthWidget.h"
 
 extern QList<AbstractQuery*> PQs;
+QSqlDatabase db;
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    QApplication::setApplicationDisplayName("EasyRent");
-//    QApplication::setOrganizationName("Grad Petra");
     QApplication::setApplicationName("EasyRent");
 
-    QSqlDatabase db = QSqlDatabase::addDatabase("QODBC");
-    db.setDatabaseName("Driver={SQL SERVER};Server=CSA\\SQLEXPRESS;Database=EasyRent;Integrated Security=false;");
+    db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("D:/EasyRent/Database/EasyRent.db");
     if (!db.open())
     {
-        QException e;
-        e.raise();
+        qDebug() << db.lastError();
         return 10;
     }
 
-    MainWindow FormMain;
-
-    AppInfo::setMainWindow(&FormMain);
-
-    FormMain.show();
+    AuthWidget* auth = new AuthWidget();
+    auth->setWindowTitle("Авторизация EasyRent");
+    auth->setWindowModality(Qt::ApplicationModal);
+    auth->show();
 
     return a.exec();
 }

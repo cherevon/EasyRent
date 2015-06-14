@@ -67,11 +67,11 @@ void FormPriorityShow::appendPQ(const PriorityQuery * const PQ)
     ui->PQTable->setItem(ui->PQTable->rowCount() - 1, fQueryTypeColumn, newCell);
 
     // areas
-    newCell = new QTableWidgetItem( ContainerUtils::commaText( PQ->areas() ) );
+//    newCell = new QTableWidgetItem( ContainerUtils::commaText( PQ->areas() ) );
     ui->PQTable->setItem(ui->PQTable->rowCount() - 1, fAreasColumn, newCell);
 
     // metros
-    newCell = new QTableWidgetItem( ContainerUtils::commaText( PQ->metros() ) );
+//    newCell = new QTableWidgetItem( ContainerUtils::commaText( PQ->metros() ) );
     ui->PQTable->setItem(ui->PQTable->rowCount() - 1, fMetrosColumn, newCell);
 
     // rooms
@@ -133,6 +133,6 @@ void FormPriorityShow::appendPQ(const PriorityQuery * const PQ)
     ui->PQTable->setItem(ui->PQTable->rowCount() - 1, fLastSearchColumn, newCell);
 
     // e-mail addresses
-    newCell = new QTableWidgetItem( ContainerUtils::commaText( PQ->eMails() ) );
+//    newCell = new QTableWidgetItem( ContainerUtils::commaText( PQ->eMails() ) );
     ui->PQTable->setItem(ui->PQTable->rowCount() - 1, fEMailsColumn, newCell);
 }
