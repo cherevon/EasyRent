@@ -1,12 +1,14 @@
 #include "AuthWidget.h"
 #include "ui_AuthWidget.h"
+#include <QDebug>
 
 AuthWidget::AuthWidget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::AuthWidget)
 {
     ui->setupUi(this);
-    connect(ui->bLogin, SIGNAL(clicked()), SLOT(LoginClicked()));
+    connect(ui->bLogin, SIGNAL(clicked()), SLOT(loginClicked()));
+    connect(ui->bRegister, SIGNAL(clicked()), SLOT(registerClicked()));
 }
 
 AuthWidget::~AuthWidget()
@@ -14,11 +16,12 @@ AuthWidget::~AuthWidget()
     delete ui;
 }
 
-void AuthWidget::LoginClicked()
+void AuthWidget::loginClicked()
 // нажатие кнопки "Вход"
 {
-    if ( Login(ui->eLogin->text(), ui->ePassword->text()) != NULL )
-        emit loginSuccessful();
+    EasyRentUser* authUser = login(ui->eLogin->text(), ui->ePassword->text());
+    if (authUser != NULL)
+        emit loginSuccessful(authUser);
     else
     {
         emit loginFailed();
@@ -29,4 +32,12 @@ void AuthWidget::LoginClicked()
         failDlg->setIcon(QMessageBox::Critical);
         failDlg->show();
     }
+}
+
+void AuthWidget::registerClicked()
+// нажатие кнопки "Регистрация"
+{
+    WgtRegisterUser *registerDlg = new WgtRegisterUser();
+    registerDlg->setWindowModality(Qt::ApplicationModal);
+    registerDlg->show();
 }

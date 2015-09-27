@@ -2,7 +2,7 @@
 #define QUERIES_H
 
 #include <QList>
-#include "AbstractQuery.h"
+#include "RentQuery.h"
 #include "PriorityQuery.h"
 #include "ResponseQuery.h"
 

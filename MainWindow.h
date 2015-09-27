@@ -3,8 +3,8 @@
 
 #include <QMainWindow>
 #include <QSet>
-#include "FormPriorityShow.h"
 #include "Interfaces.h"
+#include <QQuickView>
 
 namespace Ui {
 class MainWindow;
@@ -19,22 +19,31 @@ public:
     ~MainWindow();
 
     /*IMainForm*/
-    void addUserWindow(QWidget* pwgt);
+    // активация указанного окна
+    void activateWindow(QWidget* pwgt);
+    // добавление пользовательского окна на главное окно
+    void addUserWindow(QWidget* pwgt, const bool needActivate = true);
+    // удаление пользовательского окна с главного окна
+    void removeUserWindow(QWidget* pwgt);
+    // добавление действия на панель инструментов
     void addToolbarAction(QAction* pAct);
-
+    // удаление действия с панели инструментов
+    void removeToolbarAction(QAction* pAct);
 
 private:
-    QList<QWidget*> fOpenedWindows; // a list of all windows which are currently opened
-    Ui::MainWindow *ui;
+    QQuickView* ui; // пользовательский интерфейс окна
+    QList<QWidget*> fOpenedWindows; // список открытых в данный момент окон
+    QObjectList fExtractedControls; // список извлеченных из пользовательского окна элементов управления
 
-    void extractWindowControls(IControlExtractor* pwgt); // extracts controls from pwgt
+    // извлечение элементов управления из виджета
+    void extractControls(IControlExtractor* pwgt);
+    // получение порядкового номера вкладки по указателю на виджет
+    int getTabNumByWidget(QWidget* pwgt);
 
 protected:
     virtual void connectEvents(); // connecting signals and slots of this window
-    virtual void fillStatusBar(); // fill status bar with widgets
-
-public slots:
-    void showPQs(); // open the window with user`s priority queries
+    // удаление всех элементов управления, извлеченных из пользовательского окна
+    virtual void removeExtractedControls();
 };
 
 #endif // MAINWINDOW_H

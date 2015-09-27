@@ -2,7 +2,7 @@
 #define RESPONSEQUERY_H
 
 #include <QDateTime>
-#include "AbstractQuery.h"
+#include "RentQuery.h"
 
 /*====================================================================================================================*/
 

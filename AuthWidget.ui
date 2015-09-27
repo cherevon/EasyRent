@@ -11,7 +11,16 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Вход в ER</string>
+  </property>
+  <property name="windowOpacity">
+   <double>1.000000000000000</double>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
@@ -21,6 +30,12 @@
        <horstretch>0</horstretch>
        <verstretch>0</verstretch>
       </sizepolicy>
+     </property>
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
      </property>
      <property name="text">
       <string>Логин</string>
@@ -42,6 +57,9 @@
    </item>
    <item row="3" column="1">
     <widget class="QPushButton" name="bLogin">
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
      <property name="text">
       <string>Вход</string>
      </property>
@@ -55,6 +73,9 @@
        <verstretch>0</verstretch>
       </sizepolicy>
      </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
      <property name="text">
       <string>Пароль</string>
      </property>
@@ -62,6 +83,9 @@
    </item>
    <item row="3" column="2">
     <widget class="QPushButton" name="bRegister">
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
      <property name="text">
       <string>Регистрация</string>
      </property>
@@ -69,6 +93,12 @@
    </item>
    <item row="1" column="1" colspan="2">
     <widget class="QLineEdit" name="ePassword">
+     <property name="mouseTracking">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
      <property name="inputMask">
       <string/>
      </property>
@@ -78,10 +108,20 @@
     </widget>
    </item>
    <item row="0" column="1" colspan="2">
-    <widget class="QLineEdit" name="eLogin"/>
+    <widget class="QLineEdit" name="eLogin">
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+    </widget>
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>eLogin</tabstop>
+  <tabstop>ePassword</tabstop>
+  <tabstop>bLogin</tabstop>
+  <tabstop>bRegister</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

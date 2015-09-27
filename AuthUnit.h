@@ -22,9 +22,9 @@ struct EasyRentUser
 };
 
 // авторизация пользователя в системе EasyRent (в случае успеха возвращает структуру с данными пользователя)
-EasyRentUser *Login(const QString &username, const QString &password);
+EasyRentUser *login(const QString &username, const QString &password);
 
 // регистрация пользователя в системе EasyRent
-bool RegisterUser(const EasyRentUser * const user);
+bool registerUser(const EasyRentUser * const user);
 
 #endif // AUTHUNIT_H

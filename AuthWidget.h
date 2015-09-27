@@ -4,6 +4,7 @@
 #include <QWidget>
 #include <QMessageBox>
 #include "AuthUnit.h"
+#include "WgtRegisterUser.h"
 
 namespace Ui {
 class AuthWidget;
@@ -22,10 +23,12 @@ private:
 
 private slots:
     // нажатие кнопки "Вход"
-    void LoginClicked();
+    void loginClicked();
+    // нажатие кнопки "Регистрация"
+    void registerClicked();
 
 signals:
-    void loginSuccessful();
+    void loginSuccessful(EasyRentUser*);
     void loginFailed();
 };
 

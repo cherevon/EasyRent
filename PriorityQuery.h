@@ -2,14 +2,7 @@
 #define PRIORITYQUERY_H
 
 #include <QDateTime>
-#include "AbstractQuery.h"
-
-/*====================================================================================================================*/
-
-namespace Queries
-{
-    enum ObjType {Room, Flat, Elite};   // тип объекта
-}
+#include "RentQuery.h"
 
 using namespace Queries;
 

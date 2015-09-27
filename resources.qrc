@@ -7,5 +7,9 @@
         <file alias="settings.ico">Images/settings.ico</file>
         <file alias="help.ico">Images/help.ico</file>
         <file alias="Exit.ico">Images/Exit.ico</file>
+        <file alias="hammer.ico">Images/hammer.ico</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>MainWindow.qml</file>
     </qresource>
 </RCC>

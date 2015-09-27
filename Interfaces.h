@@ -3,19 +3,29 @@
 
 #include <QObjectList>
 
+// интерфейс для обЪектов, которые могут извлекать свои элементы управления на главное окно
 class IControlExtractor
-// interface for widgets that can extract their controls to main form
 {
 public:
-    virtual QObjectList extractControls() = 0; // returns controls to be placed on the main window
+    // получение перечня элементов, которые неободимо расположить в главном окне
+    virtual QObjectList extractControls() = 0;
 };
 
+
+// интерфейс главного окна приложения
 class IMainWindow
-// interface for the main window of the application
 {
 public:
-    virtual void addUserWindow(QWidget* pwgt) = 0; // inserts new widget
-    virtual void addToolbarAction(QAction* pAct) = 0; // adds new action to the ToolBar
+    // активация указанного окна
+    virtual void activateWindow(QWidget* pwgt) = 0;
+    // добавление пользовательского окна на главное окно
+    virtual void addUserWindow(QWidget* pwgt, const bool needActivate = true) = 0;
+    // удаление пользовательского окна с главного окна
+    virtual void removeUserWindow(QWidget* pwgt) = 0;
+    // добавление действия на панель инструментов
+    virtual void addToolbarAction(QAction* pAct) = 0;
+    // удаление действия с панели инструментов
+    virtual void removeToolbarAction(QAction* pAct) = 0;
 };
 
 #endif // INTERFACES_H

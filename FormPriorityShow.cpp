@@ -93,7 +93,7 @@ void FormPriorityShow::appendPQ(const PriorityQuery * const PQ)
     // fridge
     newCell = new QTableWidgetItem( PQ->hasFridge()?"+":"-" );
     ui->PQTable->setItem(ui->PQTable->rowCount() - 1, fFridgeColumn, newCell);
-   
+
     // price
     newCell = new QTableWidgetItem( QString::number(PQ->basePrice()) + " руб." );
     ui->PQTable->setItem(ui->PQTable->rowCount() - 1, fPriceColumn, newCell);
