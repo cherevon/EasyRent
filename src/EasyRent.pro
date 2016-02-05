@@ -24,7 +24,7 @@ SOURCES += main.cpp\
     AuthUnit.cpp \
     WgtRegisterUser.cpp \
     Location.cpp \
-    RentQuery.cpp
+    RealEstateQuery.cpp
 
 HEADERS  += \
     Queries.h \
@@ -40,16 +40,16 @@ HEADERS  += \
     AuthUnit.h \
     WgtRegisterUser.h \
     Location.h \
-    RentQuery.h
+    RealEstateQuery.h
 
 FORMS    += \
     FormPriorityShow.ui \
     FormPriorityCreate.ui \
     AuthWidget.ui \
-    WgtRegisterUser.ui
+    WgtRegisterUser.ui \
+    MainWindow.ui
 
 RESOURCES += \
     resources.qrc
 
-OTHER_FILES += \
-    MainWindow.qml
+OTHER_FILES +=

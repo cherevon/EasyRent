@@ -2,7 +2,7 @@
 #define PRIORITYQUERY_H
 
 #include <QDateTime>
-#include "RentQuery.h"
+#include "RealEstateQuery.h"
 
 using namespace Queries;
 

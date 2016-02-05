@@ -9,7 +9,5 @@
         <file alias="Exit.ico">Images/Exit.ico</file>
         <file alias="hammer.ico">Images/hammer.ico</file>
     </qresource>
-    <qresource prefix="/">
-        <file>MainWindow.qml</file>
-    </qresource>
+    <qresource prefix="/"/>
 </RCC>
