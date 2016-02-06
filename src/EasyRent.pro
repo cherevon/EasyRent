@@ -12,44 +12,9 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = EasyRent
 TEMPLATE = app
 
-SOURCES += main.cpp\
-    PropertyStorage.cpp \
-    PriorityQuery.cpp \
-    ResponseQuery.cpp \
-    MainWindow.cpp \
-    FormPriorityShow.cpp \
-    AppInfo.cpp \
-    FormPriorityCreate.cpp \
-    AuthWidget.cpp \
-    AuthUnit.cpp \
-    WgtRegisterUser.cpp \
-    Location.cpp \
-    RealEstateQuery.cpp
+SOURCES += RealEstateQuery.cpp \
+    main.cpp
 
-HEADERS  += \
-    Queries.h \
-    PropertyStorage.h \
-    PriorityQuery.h \
-    ResponseQuery.h \
-    MainWindow.h \
-    FormPriorityShow.h \
-    Interfaces.h \
-    AppInfo.h \
-    FormPriorityCreate.h \
-    AuthWidget.h \
-    AuthUnit.h \
-    WgtRegisterUser.h \
-    Location.h \
-    RealEstateQuery.h
-
-FORMS    += \
-    FormPriorityShow.ui \
-    FormPriorityCreate.ui \
-    AuthWidget.ui \
-    WgtRegisterUser.ui \
-    MainWindow.ui
-
-RESOURCES += \
-    resources.qrc
+HEADERS += RealEstateQuery.h
 
 OTHER_FILES +=

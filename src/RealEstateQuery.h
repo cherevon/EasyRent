@@ -7,6 +7,8 @@
 */
 
 #include <vector>
+#include <ctime>
+#include <string>
 
 
 namespace RealEstate
@@ -22,19 +24,18 @@ namespace RealEstate
     };
     /** Тип недвижимости
     */
-    enum ObjectType
+    enum RealEstateType
     {
-        ROOM, /**< Комната */
-        FLAT, /**< Квартира */
-        COTTAGE, /**< Коттедж */
-        TOWNHOUSE /**< Таунхаус */
+        ROOM = 0, /**< Комната */
+        FLAT = 1, /**< Квартира */
+        TOWNHOUSE = 2, /**< Таунхаус */
+        COTTAGE = 3 /**< Коттедж */
     };
 }
 
 using namespace RealEstate;
 using namespace std;
 typedef unsigned int uint;
-typedef unsigned float ufloat;
 
 
 /** Общий тип всех запросов покупки/аренды недвижимости
@@ -44,23 +45,21 @@ class RealEstateQuery
 private:
     time_t fCreateDate; // дата создания
     QueryType fQueryType; // тип запроса
-    ObjectType fObjectType; // тип объекта недвижимости
+    RealEstateType fRealEstateType; // тип объекта недвижимости
     string fCity; // город, в котором расположен объект недвижимости
     string fAddress; // адрес
     uint fPrice; // стоимость
     uint fFloorCount; // количество этажей
     uint fFirstFloor; // номер первого этажа, занимаемого объектом
-    uint fRoomCount; // количество комнат
-    uint fKitchenCount; // количество кухонь
-    ufloat fSquareTotal; // общая площадь
-    vector<ufloat> fSquareKitchens; // площади кухонь (если их несколько)
-    vector<ufloat> fSquareRooms; // площадь каждой комнаты
+    float fSquareTotal; // общая площадь
+    vector<float> fSquareKitchens; // площади кухонь (если их несколько)
+    vector<float> fSquareRooms; // площадь каждой комнаты
     string fContactInfo; // контактная информация (для связи с автором запроса)
     string fAddInfo; // дополнительная информация об объекте недвижимости
 
 public:
-    RentQuery();
-    virtual ~RentQuery();
+    RealEstateQuery();
+    virtual ~RealEstateQuery();
 
     /** Получение даты создания запроса
       @return Дата создания запроса
@@ -73,7 +72,7 @@ public:
     /** Получение типа недвижимости
       @return Тип недвижимости
     */
-    ObjectType objectType() const;
+    RealEstateType realEstateType() const;
     /** Получение города, в котором расположен объект недвижимости
       @return Город, в котором расположен объект недвижимости
     */
@@ -105,17 +104,17 @@ public:
     /** Получение общей площади объекта недвижимости
       @return Общая площадь объекта недвижимости
     */
-    ufloat squareTotal() const;
+    float squareTotal() const;
     /** Получение площади кухни
       @param kitchenNum Порядковый номер кухни, площадь которой необходимо получить
       @return Площадь кухни
     */
-    ufloat squareKitchen(const uint kitchenNum) const;
+    float squareKitchen(const uint kitchenNum) const;
     /** Получение площади комнаты
       @param roomNum Порядковый номер комнаты, площадь которой необходимо получить
       @return Площадь комнаты
     */
-    ufloat squareRoom(const uint roomNum) const;
+    float squareRoom(const uint roomNum) const;
     /** Получение контактной информации для связи с автором запроса
       @return Контактная информация для связи с автором запроса
     */
@@ -124,9 +123,6 @@ public:
       @return Дополнительная информация об объекте недвижимости
     */
     string additionalInfo() const;
-
-
-
 
     /** Изменение даты создания запроса
         @param value Новая дата создания
@@ -139,7 +135,7 @@ public:
     /** Изменение типа объекта недвижимости
         @param value Новый тип объекта недвижимости
     */
-    void setObjectType(const ObjectType value);
+    void setRealEstateType(const RealEstateType value);
     /** Изменение города
         @param value Новый город
     */
@@ -171,17 +167,17 @@ public:
     /** Изменение общей площади
         @param value Новое значение общей площади
     */
-    void setSquareTotal(const ufloat value);
+    void setSquareTotal(const float value);
     /** Изменение площади кухни
         @param kitchenNum Порядковый номер кухни, площадь которой необходимо изменить
         @param value Новое значение площади кухни
     */
-    void setSquareKitchen(const uint kitchenNum, const ufloat value);
+    void setSquareKitchen(const uint kitchenNum, const float value);
     /** Изменение площади комнаты
         @param kitchenNum Порядковый номер комнаты, площадь которой необходимо изменить
         @param value Новое значение площади комнаты
     */
-    void setSquareRoom(const uint roomNum, const ufloat value);
+    void setSquareRoom(const uint roomNum, const float value);
     /** Изменение контактной информации для связи с автором запроса
         @param value Новая контактная информация для связи с автором запроса
     */
@@ -191,12 +187,18 @@ public:
     */
     void setAdditionalInfo(const string value);
 
-    // проверка подходит ли указанный запрос для данного
-    bool matches(RealEstateQuery* query);
+    /** Проверка, подходит ли запрос Q для данного запроса
+        @param Q Запрос, с которым осуществляется сравнение
+    */
+    bool fits(const RealEstateQuery& Q) const;
 
-    // проверка запросов на идентичность
-    bool operator ==(const RealEstateQuery& Q);
-    // копирование параметров из запроса, указанного в параметре
+    /** Проверка, являются ли запросы одинаковыми
+        @param Q Запрос, с которым осуществляется сравнение
+    */
+    bool operator ==(const RealEstateQuery& Q) const;
+    /** Копирование параметров запроса
+        @param Q Запрос, из которого осуществляется копирование
+    */
     RealEstateQuery& operator =(const RealEstateQuery& Q);
 };
 
