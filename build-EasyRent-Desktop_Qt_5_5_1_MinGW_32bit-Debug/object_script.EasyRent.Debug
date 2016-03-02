@@ -1,0 +1,13 @@
+INPUT(
+./debug\RealEstateQuery.o
+./debug\main.o
+./debug\MainWindow.o
+./debug\FormUserQueries.o
+./debug\RealEstateQueryModel.o
+./debug\CreateUserQueryDialog.o
+./debug\qrc_resources.o
+./debug\moc_MainWindow.o
+./debug\moc_FormUserQueries.o
+./debug\moc_RealEstateQueryModel.o
+./debug\moc_CreateUserQueryDialog.o
+);

@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file alias="house.ico">../Images/house.ico</file>
+        <file alias="plus.ico">../Images/Plus.ico</file>
+    </qresource>
+</RCC>

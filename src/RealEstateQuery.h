@@ -3,12 +3,12 @@
 
 /*
 17.01.2016 Черевичко С.А.
-Данный модуль содержит базовый класс запроса по недвижимости
+Данный файл содержит базовый класс запроса по недвижимости
 */
 
-#include <vector>
-#include <ctime>
-#include <string>
+#include <QVector>
+#include <QDateTime>
+#include <QString>
 
 
 namespace RealEstate
@@ -22,6 +22,8 @@ namespace RealEstate
         BUY, /**< Купить */
         SELL /**< Продать */
     };
+
+
     /** Тип недвижимости
     */
     enum RealEstateType
@@ -34,8 +36,6 @@ namespace RealEstate
 }
 
 using namespace RealEstate;
-using namespace std;
-typedef unsigned int uint;
 
 
 /** Общий тип всех запросов покупки/аренды недвижимости
@@ -43,19 +43,19 @@ typedef unsigned int uint;
 class RealEstateQuery
 {
 private:
-    time_t fCreateDate; // дата создания
+    QDateTime fCreateDate; // дата создания
     QueryType fQueryType; // тип запроса
     RealEstateType fRealEstateType; // тип объекта недвижимости
-    string fCity; // город, в котором расположен объект недвижимости
-    string fAddress; // адрес
+    QString fCity; // город, в котором расположен объект недвижимости
+    QString fAddress; // адрес
     uint fPrice; // стоимость
     uint fFloorCount; // количество этажей
     uint fFirstFloor; // номер первого этажа, занимаемого объектом
     float fSquareTotal; // общая площадь
-    vector<float> fSquareKitchens; // площади кухонь (если их несколько)
-    vector<float> fSquareRooms; // площадь каждой комнаты
-    string fContactInfo; // контактная информация (для связи с автором запроса)
-    string fAddInfo; // дополнительная информация об объекте недвижимости
+    QVector<float> fSquareKitchens; // площади кухонь (если их несколько)
+    QVector<float> fSquareRooms; // площадь каждой комнаты
+    QString fContactInfo; // контактная информация (для связи с автором запроса)
+    QString fAddInfo; // дополнительная информация об объекте недвижимости
 
 public:
     RealEstateQuery();
@@ -64,7 +64,7 @@ public:
     /** Получение даты создания запроса
       @return Дата создания запроса
     */
-    time_t createDate() const;
+    QDateTime createDate() const;
     /** Получение типа запроса
       @return Тип запроса
     */
@@ -76,11 +76,11 @@ public:
     /** Получение города, в котором расположен объект недвижимости
       @return Город, в котором расположен объект недвижимости
     */
-    string city() const;
+    QString city() const;
     /** Получение адреса объекта недвижимости
       @return Адрес объекта недвижимости
     */
-    string address() const;
+    QString address() const;
     /** Получение стоимости объекта недвижимости
       @return Стоимость объекта недвижимости
     */
@@ -118,16 +118,16 @@ public:
     /** Получение контактной информации для связи с автором запроса
       @return Контактная информация для связи с автором запроса
     */
-    string contactInfo() const;
+    QString contactInfo() const;
     /** Получение дополнительной информации об объекте недвижимости
       @return Дополнительная информация об объекте недвижимости
     */
-    string additionalInfo() const;
+    QString additionalInfo() const;
 
     /** Изменение даты создания запроса
         @param value Новая дата создания
     */
-    void setCreateDate(const time_t value);
+    void setCreateDate(const QDateTime value);
     /** Изменение типа запроса
         @param value Новый тип запроса
     */
@@ -139,11 +139,11 @@ public:
     /** Изменение города
         @param value Новый город
     */
-    void setCity(const string value);
+    void setCity(const QString value);
     /** Изменение адреса
         @param value Новый адрес
     */
-    void setAddress(const string value);
+    void setAddress(const QString value);
     /** Изменение стоимости
         @param value Новая стоимость
     */
@@ -181,11 +181,11 @@ public:
     /** Изменение контактной информации для связи с автором запроса
         @param value Новая контактная информация для связи с автором запроса
     */
-    void setContactInfo(const string value);
+    void setContactInfo(const QString value);
     /** Изменение дополнительной информации об объекте недвижимости
         @param value Новая дополнительная информация об объекте недвижимости
     */
-    void setAdditionalInfo(const string value);
+    void setAdditionalInfo(const QString value);
 
     /** Проверка, подходит ли запрос Q для данного запроса
         @param Q Запрос, с которым осуществляется сравнение
@@ -202,6 +202,19 @@ public:
     RealEstateQuery& operator =(const RealEstateQuery& Q);
 };
 
-/*====================================================================================================================*/
+
+/** Преобразование типа запроса в строку
+ * @param queryT Тип запроса, который необходимо преобразовать в строку
+ * @returns Тип запроса в виде строки
+ */
+QString queryTypeToString(const QueryType& queryT);
+
+
+/** Преобразование типа недвижимости в строку
+ * @param rt Тип недвижимости, который необходимо преобразовать в строку
+ * @returns Тип недвижимости в виде строки
+ */
+QString realEstateTypeToString(const RealEstateType& rt);
+
 
 #endif // REALESTATEQUERY_H
