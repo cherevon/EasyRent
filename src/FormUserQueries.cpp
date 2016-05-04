@@ -1,6 +1,6 @@
 #include "FormUserQueries.h"
 #include "ui_FormUserQueries.h"
-#include "CreateUserQueryDialog.h"
+#include "DlgUserQueryEditor.h"
 #include <QDebug>
 
 FormUserQueries::FormUserQueries(QWidget *parent) :
@@ -8,9 +8,8 @@ FormUserQueries::FormUserQueries(QWidget *parent) :
     ui(new Ui::FormUserQueries)
 {
     ui->setupUi(this);
-    refreshData();
 
-    connect(ui->toolButton, SIGNAL(clicked()), SLOT(newUserQuery()));
+    refreshData();
 }
 
 FormUserQueries::~FormUserQueries()
@@ -33,14 +32,13 @@ void FormUserQueries::changeEvent(QEvent *e)
 
 void FormUserQueries::newUserQuery()
 {
-    CreateUserQueryDialog* dlg = new CreateUserQueryDialog();
-    dlg->exec();
+//    DlgUserQueryEditor* dlg = new DlgUserQueryEditor();
+//    dlg->exec();
 }
 
 
 void FormUserQueries::refreshData()
 {
-
-    RealEstateQueryModel* model = new RealEstateQueryModel(ui->tableView);
-    ui->tableView->setModel(model);
+    //RealEstateQueryModel* model = new RealEstateQueryModel(ui->tableView);
+    //ui->tableView->setModel(model);
 }

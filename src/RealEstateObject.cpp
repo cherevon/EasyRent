@@ -1,344 +1,279 @@
-#include "RealEstateQuery.h"
+#include "RealEstateObject.h"
 
 
-RealEstateQuery::RealEstateQuery()
+const QString ERR_NO_SOURCE_REAL_ESTATE_OBJECT = QObject::tr("Не указан объект-источник!");
+
+
+void RealEstateObject::setLastError(const QString &value)
 {
-    fCreateDate = QDateTime::currentDateTime();
-    fQueryType = RealEstate::BUY;
-    fRealEstateType = RealEstate::FLAT;
+    fLastError = value;
+}
+
+
+RealEstateObject::RealEstateObject(QObject *parent): QObject(parent)
+{
+    fRealEstateType = REALTY_FLAT;
     fCity = "";
     fAddress = "";
-    fPrice = 0;
     fFirstFloor = 1;
     fFloorCount = 1;
-    fSquareTotal = 0.0;
-    fSquareKitchens.resize(1);
-    fSquareKitchens[0] = 0.0;
-    fSquareRooms.resize(1);
-    fSquareRooms[0] = 0.0;
+    fTotalSquare= 0.0;
+    fRoomsSquare.resize(1);
+    fRoomsSquare[0] = 0.0;
     fContactInfo = "";
-    fAddInfo = "";
+    fAdditionalInfo = "";
 }
 
 
-RealEstateQuery::~RealEstateQuery()
-{
-
-}
-
-
-QDateTime RealEstateQuery::createDate() const
-{
-    return fCreateDate;
-}
-
-
-QueryType RealEstateQuery::queryType() const
-{
-    return fQueryType;
-}
-
-
-RealEstateType RealEstateQuery::realEstateType() const
+RealEstateType RealEstateObject::realEstateType() const
 {
     return fRealEstateType;
 }
 
 
-QString RealEstateQuery::city() const
+QString RealEstateObject::city() const
 {
     return fCity;
 }
 
 
-QString RealEstateQuery::address() const
+QString RealEstateObject::address() const
 {
     return fAddress;
 }
 
 
-uint RealEstateQuery::price() const
-{
-    return fPrice;
-}
-
-
-uint RealEstateQuery::floorCount() const
+uint RealEstateObject::floorCount() const
 {
     return fFloorCount;
 }
 
 
-uint RealEstateQuery::firstFloor() const
+uint RealEstateObject::firstFloor() const
 {
     return fFirstFloor;
 }
 
 
-uint RealEstateQuery::roomCount() const
+uint RealEstateObject::roomCount() const
 {
-    return fSquareRooms.size();
+    return fRoomsSquare.size();
 }
 
 
-uint RealEstateQuery::kitchenCount() const
+float RealEstateObject::totalSquare() const
 {
-    return fSquareKitchens.size();
+    return fTotalSquare;
 }
 
 
-float RealEstateQuery::squareTotal() const
+float RealEstateObject::roomSquare(const uint &roomNum) const
 {
-    return fSquareTotal;
+    return fRoomsSquare[roomNum];
 }
 
 
-float RealEstateQuery::squareKitchen(const uint kitchenNum) const
-{
-    return fSquareKitchens[kitchenNum];
-}
-
-
-float RealEstateQuery::squareRoom(const uint roomNum) const
-{
-    return fSquareRooms[roomNum];
-}
-
-
-QString RealEstateQuery::contactInfo() const
+QString RealEstateObject::contactInfo() const
 {
     return fContactInfo;
 }
 
 
-QString RealEstateQuery::additionalInfo() const
+QString RealEstateObject::additionalInfo() const
 {
-    return fAddInfo;
+    return fAdditionalInfo;
 }
 
 
-void RealEstateQuery::setCreateDate(const QDateTime value)
+uint RealEstateObject::photoCount() const
 {
-    fCreateDate = value;
+    return fPhotos.size();
 }
 
 
-void RealEstateQuery::setQueryType(const QueryType value)
+QImage RealEstateObject::photo(const uint &photoNum) const
 {
-    fQueryType = value;
+    return fPhotos[photoNum];
 }
 
 
-void RealEstateQuery::setRealEstateType(const RealEstateType value)
+void RealEstateObject::deletePhoto(const uint &photoNum)
+{
+    fPhotos.removeAt(photoNum);
+    emit changed();
+}
+
+
+void RealEstateObject::addPhoto(const QImage &value)
+{
+    fPhotos.append(value);
+    emit changed();
+}
+
+
+void RealEstateObject::setRealEstateType(const RealEstateType &value)
 {
     fRealEstateType = value;
+    emit changed();
 }
 
 
-void RealEstateQuery::setCity(const QString value)
+void RealEstateObject::setCity(const QString &value)
 {
     fCity = value;
+    emit changed();
 }
 
 
-void RealEstateQuery::setAddress(const QString value)
+void RealEstateObject::setAddress(const QString &value)
 {
     fAddress = value;
+    emit changed();
 }
 
 
-void RealEstateQuery::setPrice(const uint value)
-{
-    fPrice = value;
-}
-
-
-void RealEstateQuery::setFloorCount(const uint value)
+void RealEstateObject::setFloorCount(const uint &value)
 {
     fFloorCount = value;
+    emit changed();
 }
 
 
-void RealEstateQuery::setFirstFloor(const uint value)
+void RealEstateObject::setFirstFloor(const uint &value)
 {
     fFirstFloor = value;
+    emit changed();
 }
 
 
-void RealEstateQuery::setKitchenCount(const uint value)
+void RealEstateObject::setRoomCount(const uint &value)
 {
-    fSquareKitchens.resize(value);
+    fRoomsSquare.resize(value);
+    emit changed();
 }
 
 
-void RealEstateQuery::setRoomCount(const uint value)
+void RealEstateObject::setTotalSquare(const float &value)
 {
-    fSquareRooms.resize(value);
+    fTotalSquare = value;
+    emit changed();
 }
 
 
-void RealEstateQuery::setSquareTotal(const float value)
+void RealEstateObject::setRoomSquare(const uint &roomNum, const float &value)
 {
-    fSquareTotal = value;
+    fRoomsSquare[roomNum] = value;
+    emit changed();
 }
 
 
-void RealEstateQuery::setSquareKitchen(const uint kitchenNum, const float value)
-{
-    fSquareKitchens[kitchenNum] = value;
-}
-
-
-void RealEstateQuery::setSquareRoom(const uint roomNum, const float value)
-{
-    fSquareRooms[roomNum] = value;
-}
-
-
-void RealEstateQuery::setContactInfo(const QString value)
+void RealEstateObject::setContactInfo(const QString &value)
 {
     fContactInfo = value;
+    emit changed();
 }
 
 
-void RealEstateQuery::setAdditionalInfo(const QString value)
+void RealEstateObject::setAdditionalInfo(const QString &value)
 {
-    fAddInfo = value;
+    fAdditionalInfo = value;
+    emit changed();
 }
 
 
-bool RealEstateQuery::fits(const RealEstateQuery &Q) const
+QString RealEstateObject::lastError() const
 {
-    bool queriesFit = true; // подходят ли запросы друг другу
-
-    // город
-    queriesFit = queriesFit && (fCity == Q.fCity);
-    // тип недвижимости
-    if ((fQueryType == RENT_SELL) || (fQueryType == SELL))
-        queriesFit = queriesFit && (fRealEstateType >= Q.fRealEstateType);
-    else
-        queriesFit = queriesFit && (fRealEstateType <= Q.fRealEstateType);
-    // тип запроса
-    queriesFit = queriesFit &&
-        (
-            ((fQueryType == RENT_SELL) && (Q.fQueryType == RENT_BUY)) ||
-            ((fQueryType == RENT_BUY) && ((Q.fQueryType == RENT_SELL) || (Q.fQueryType == SELL))) ||
-            ((fQueryType == SELL) && (Q.fQueryType == BUY)) ||
-            ((fQueryType == BUY) && (Q.fQueryType == SELL))
-        );
-    // стоимость
-    if ((fQueryType == RENT_SELL) || (fQueryType == SELL))
-        queriesFit = queriesFit && (fPrice <= Q.fPrice);
-    else
-        queriesFit = queriesFit && (fPrice >= Q.fPrice);
-    // этаж
-    queriesFit = queriesFit && (fFirstFloor == Q.fFirstFloor);
-    // количество этажей
-    if ((fQueryType == RENT_SELL) || (fQueryType == SELL))
-        queriesFit = queriesFit && (fFloorCount >= Q.fFloorCount);
-    else
-        queriesFit = queriesFit && (fFloorCount <= Q.fFloorCount);
-    // общая площадь
-    if ((fQueryType == RENT_SELL) || (fQueryType == SELL))
-        queriesFit = queriesFit && (fSquareTotal >= Q.fSquareTotal);
-    else
-        queriesFit = queriesFit && (fSquareTotal <= Q.fSquareTotal);
-
-    return queriesFit;
+    return fLastError;
 }
 
 
-bool RealEstateQuery::operator ==(const RealEstateQuery& Q) const
+bool RealEstateObject::assign(const RealEstateObject * const source)
 {
-    // сравниваем комнаты
-    bool roomsEqual = this->roomCount() == Q.roomCount();
-    if (roomsEqual)
+    // проверяем возможность выполнения операции
+    if (source == NULL)
     {
-        for(int roomNum = 0; roomNum < fSquareRooms.size(); ++roomNum)
-            if (fSquareRooms[roomNum] != Q.fSquareRooms[roomNum])
-            {
-                roomsEqual = false;
-                break;
-            }
+        setLastError(ERR_NO_SOURCE_REAL_ESTATE_OBJECT);
+        return false;
     }
 
-    // сравниваем кухни
-    bool kitchensEqual = this->kitchenCount() == Q.kitchenCount();
-    if (kitchensEqual)
+    // копирование основной информации об объекте недвижимости
+    fRealEstateType = source->fRealEstateType;
+    fCity = source->fCity;
+    fAddress = source->fAddress;
+    fFloorCount = source->fFloorCount;
+    fFirstFloor = source->fFirstFloor;
+    fTotalSquare = source->fTotalSquare;
+    fContactInfo = source->fContactInfo;
+    fAdditionalInfo = source->fAdditionalInfo;
+
+    // копирование информации о помещениях
+    fRoomsSquare.clear();
+    fRoomsSquare.append(source->fRoomsSquare);
+
+    // копирование фотографий
+    fPhotos.clear();
+    fPhotos.append(source->fPhotos);
+
+    emit changed();
+    return true;
+}
+
+
+float RealEstateObject::totalRoomsSquare() const
+{
+    float res = 0;
+    foreach(float roomSquare, fRoomsSquare)
     {
-        for(int kitchenNum = 0; kitchenNum < fSquareKitchens.size(); ++kitchenNum)
-            if (fSquareKitchens[kitchenNum] != Q.fSquareKitchens[kitchenNum])
-            {
-                kitchensEqual = false;
-                break;
-            }
+        res += roomSquare;
     }
-
-    // сравниваем все параметры запроса
-    return (fQueryType == Q.fQueryType) &&
-        (fCreateDate == Q.fCreateDate) &&
-        (fRealEstateType == Q.fRealEstateType) &&
-        (fCity == Q.fCity) &&
-        (fAddress == Q.fAddress) &&
-        (fPrice == Q.fPrice) &&
-        (fFloorCount == Q.fFloorCount) &&
-        (fFirstFloor == Q.fFirstFloor) &&
-        kitchensEqual && roomsEqual &&
-        (fSquareTotal == Q.fSquareTotal) &&
-        (fContactInfo == Q.fContactInfo) &&
-        (fAddInfo == Q.fAddInfo);
+    return res;
 }
 
 
-RealEstateQuery& RealEstateQuery::operator =(const RealEstateQuery& Q)
+bool RealEstateObject::operator >(const RealEstateObject * const other)
 {
-    // общая информация о запросе
-    fCreateDate = Q.fCreateDate;
-    fQueryType = Q.fQueryType;
-    fRealEstateType = Q.fRealEstateType;
-    fCity = Q.fCity;
-    fAddress = Q.fAddress;
-    fPrice = Q.fPrice;
-    fFloorCount = Q.fFloorCount;
-    fSquareTotal = Q.fSquareTotal;
-    fContactInfo = Q.fContactInfo;
-    fAddInfo = Q.fAddInfo;
-
-    // кухни
-    fSquareKitchens.resize(Q.fSquareKitchens.size());
-    for(int kitchenNum = 0; kitchenNum < fSquareKitchens.size(); ++kitchenNum)
-        fSquareKitchens[kitchenNum] = Q.fSquareKitchens[kitchenNum];
-
-    // комнаты
-    fSquareRooms.resize(Q.fSquareRooms.size());
-    for(int roomNum = 0; roomNum < fSquareRooms.size(); ++roomNum)
-        fSquareRooms[roomNum] = Q.fSquareRooms[roomNum];
-
-    return *this;
+    return fTotalSquare > other->fTotalSquare;
 }
 
 
-QString queryTypeToString(const QueryType &queryT)
+bool RealEstateObject::operator <(const RealEstateObject * const other)
 {
-    if (queryT == SELL)
-        return QString("Продать");
-    else if (queryT == BUY)
-        return QString("Купить");
-    else if (queryT == RENT_SELL)
-        return QString("Сдать в аренду");
-    else
-        return QString("Снять в аренду");
+    return fTotalSquare < other->fTotalSquare;
 }
 
 
 QString realEstateTypeToString(const RealEstateType& rt)
 {
-    if (rt == COTTAGE)
-        return QString("Коттедж");
-    else if (rt == ROOM)
-        return QString("Комната");
-    else if (rt == FLAT)
-        return QString("Квартира");
-    else if (rt == TOWNHOUSE)
-        return QString("Таунхаус");
+    QMap<RealEstateType, QString>::ConstIterator iter;
+    for(iter = REAL_ESTATE_TYPE_STRINGS.constBegin(); iter != REAL_ESTATE_TYPE_STRINGS.constEnd(); ++iter)
+    {
+        if (iter.key() == rt)
+            return iter.value();
+    }
+
+    return QString();
+}
+
+
+QStringList availableRealEstateTypesStrings()
+{
+    QStringList result;
+    QMap<RealEstateType, QString>::ConstIterator iter;
+    for(iter = REAL_ESTATE_TYPE_STRINGS.constBegin(); iter != REAL_ESTATE_TYPE_STRINGS.constEnd(); ++iter)
+        result << iter.value();
+
+    return result;
+}
+
+
+RealEstateType stringToRealEstateType(const QString &rt)
+{
+    QMap<RealEstateType, QString>::ConstIterator iter;
+    for(iter = REAL_ESTATE_TYPE_STRINGS.constBegin(); iter != REAL_ESTATE_TYPE_STRINGS.constEnd(); ++iter)
+    {
+        if (rt.compare(iter.value(), Qt::CaseInsensitive) == 0)
+            return iter.key();
+    }
+
+    return REALTY_NONE;
 }

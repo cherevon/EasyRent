@@ -2,38 +2,34 @@
 
 
 // инициализируем константы класса RealEstateQueryModel
-const char* RealEstateQueryModel::COLUMN_NAME_CREATE_DATE = "Дата создания";
-const char* RealEstateQueryModel::COLUMN_NAME_QUERY_TYPE = "Тип запроса";
-const char* RealEstateQueryModel::COLUMN_NAME_REAL_ESTATE_TYPE = "Тип объекта недвижимости";
-const char* RealEstateQueryModel::COLUMN_NAME_CITY = "Город";
-const char* RealEstateQueryModel::COLUMN_NAME_ADDRESS = "Адрес";
-const char* RealEstateQueryModel::COLUMN_NAME_PRICE = "Стоимость";
-const char* RealEstateQueryModel::COLUMN_NAME_FLOOR_COUNT = "Количество этажей";
-const char* RealEstateQueryModel::COLUMN_NAME_FIRST_FLOOR = "Номер нижнего этажа";
-const char* RealEstateQueryModel::COLUMN_NAME_SQUARE_TOTAL = "Общая площадь";
-const char* RealEstateQueryModel::COLUMN_NAME_SQUARE_KITCHENS = "Площадь кухонь";
-const char* RealEstateQueryModel::COLUMN_NAME_SQUARE_ROOMS = "Площадь комнат";
-const char* RealEstateQueryModel::COLUMN_NAME_CONTACT_INFO = "Контакт";
-const char* RealEstateQueryModel::COLUMN_NAME_ADDITIONAL_INFO = "Дополнительная информация";
+const QString RealEstateQueryModel::COLUMN_NAME_CREATE_DATE = QObject::tr("Дата создания");
+const QString RealEstateQueryModel::COLUMN_NAME_QUERY_TYPE = QObject::tr("Тип запроса");
+const QString RealEstateQueryModel::COLUMN_NAME_REAL_ESTATE_TYPE = QObject::tr("Тип объекта недвижимости");
+const QString RealEstateQueryModel::COLUMN_NAME_CITY = QObject::tr("Город");
+const QString RealEstateQueryModel::COLUMN_NAME_ADDRESS = QObject::tr("Адрес");
+const QString RealEstateQueryModel::COLUMN_NAME_PRICE = QObject::tr("Стоимость");
+const QString RealEstateQueryModel::COLUMN_NAME_FLOORS = QObject::tr("Этажи");
+const QString RealEstateQueryModel::COLUMN_NAME_SQUARE_TOTAL = QObject::tr("Общая площадь");
+const QString RealEstateQueryModel::COLUMN_NAME_SQUARE_ROOMS = QObject::tr("Площадь комнат");
+const QString RealEstateQueryModel::COLUMN_NAME_CONTACT_INFO = QObject::tr("Контакт");
+const QString RealEstateQueryModel::COLUMN_NAME_ADDITIONAL_INFO = QObject::tr("Дополнительная информация");
+const QString RealEstateQueryModel::COLUMN_NAME_SOURCE = QObject::tr("Источник");
 
 
-RealEstateQueryModel::RealEstateQueryModel(QObject *parent)
-    : QAbstractTableModel(parent)
+RealEstateQueryModel::RealEstateQueryModel(QObject *parent): QAbstractTableModel(parent)
 {
-    fColumnNames.resize(COLUMN_COUNT);
-    fColumnNames[COLUMN_INDEX_ADDITIONAL_INFO] = COLUMN_NAME_ADDITIONAL_INFO;
-    fColumnNames[COLUMN_INDEX_CREATE_DATE] = COLUMN_NAME_CREATE_DATE;
-    fColumnNames[COLUMN_INDEX_QUERY_TYPE] = COLUMN_NAME_QUERY_TYPE;
-    fColumnNames[COLUMN_INDEX_REAL_ESTATE_TYPE] = COLUMN_NAME_REAL_ESTATE_TYPE;
-    fColumnNames[COLUMN_INDEX_CITY] = COLUMN_NAME_CITY;
-    fColumnNames[COLUMN_INDEX_ADDRESS] = COLUMN_NAME_ADDRESS;
-    fColumnNames[COLUMN_INDEX_PRICE] = COLUMN_NAME_PRICE;
-    fColumnNames[COLUMN_INDEX_FLOOR_COUNT] = COLUMN_NAME_FLOOR_COUNT;
-    fColumnNames[COLUMN_INDEX_FIRST_FLOOR] = COLUMN_NAME_FIRST_FLOOR;
-    fColumnNames[COLUMN_INDEX_SQUARE_TOTAL] = COLUMN_NAME_SQUARE_TOTAL;
-    fColumnNames[COLUMN_INDEX_SQUARE_KITCHENS] = COLUMN_NAME_SQUARE_KITCHENS;
-    fColumnNames[COLUMN_INDEX_SQUARE_ROOMS] = COLUMN_NAME_SQUARE_ROOMS;
-    fColumnNames[COLUMN_INDEX_CONTACT_INFO] = COLUMN_NAME_CONTACT_INFO;
+    fColumnNames << COLUMN_NAME_ADDITIONAL_INFO
+                 << COLUMN_NAME_CREATE_DATE
+                 << COLUMN_NAME_QUERY_TYPE
+                 << COLUMN_NAME_REAL_ESTATE_TYPE
+                 << COLUMN_NAME_CITY
+                 << COLUMN_NAME_ADDRESS
+                 << COLUMN_NAME_PRICE
+                 << COLUMN_NAME_FLOORS
+                 << COLUMN_NAME_SQUARE_TOTAL
+                 << COLUMN_NAME_SQUARE_ROOMS
+                 << COLUMN_NAME_CONTACT_INFO
+                 << COLUMN_NAME_SOURCE;
 }
 
 
@@ -65,7 +61,7 @@ int RealEstateQueryModel::rowCount(const QModelIndex &) const
 
 int RealEstateQueryModel::columnCount(const QModelIndex &) const
 {
-    return COLUMN_COUNT;
+    return fColumnNames.size();
 }
 
 
@@ -87,46 +83,35 @@ QVariant RealEstateQueryModel::data(const QModelIndex &index, int role) const
         return QVariant(queryTypeToString(curQuery->queryType()));
         break;
     case COLUMN_INDEX_REAL_ESTATE_TYPE:
-        return QVariant(realEstateTypeToString(curQuery->realEstateType()));
+        return QVariant(realEstateTypeToString(curQuery->searchObject()->realEstateType()));
     case COLUMN_INDEX_CITY:
-        return QVariant(curQuery->city());
+        return QVariant(curQuery->searchObject()->city());
         break;
     case COLUMN_INDEX_ADDRESS:
-        return QVariant(curQuery->address());
+        return QVariant(curQuery->searchObject()->address());
         break;
     case COLUMN_INDEX_PRICE:
-        return QVariant(curQuery->price());
+        return QVariant(curQuery->searchObject()->price());
         break;
     case COLUMN_INDEX_FLOOR_COUNT:
-        return QVariant(curQuery->floorCount());
+        return QVariant(curQuery->searchObject()->floorCount());
         break;
     case COLUMN_INDEX_FIRST_FLOOR:
-        return QVariant(curQuery->firstFloor());
+        return QVariant(curQuery->searchObject()->firstFloor());
         break;
     case COLUMN_INDEX_SQUARE_TOTAL:
-        return QVariant(curQuery->squareTotal());
+        return QVariant(curQuery->searchObject()->squareTotal());
         break;
-    case COLUMN_INDEX_SQUARE_KITCHENS:
-    {
-        float kitchensSquare = 0;
-        for (uint i = 0; i < curQuery->kitchenCount(); ++i)
-            kitchensSquare += curQuery->squareKitchen(i);
-        return QVariant(kitchensSquare);
-        break;
-    }
     case COLUMN_INDEX_SQUARE_ROOMS:
     {
-        float roomsSquare = 0;
-        for (uint i = 0; i < curQuery->roomCount(); ++i)
-            roomsSquare += curQuery->squareRoom(i);
-        return QVariant(roomsSquare);
+        return QVariant(curQuery->searchObject()->totalRoomsSquare());
         break;
     }
     case COLUMN_INDEX_CONTACT_INFO:
-        return QVariant(curQuery->contactInfo());
+        return QVariant(curQuery->searchObject()->contactInfo());
         break;
     case COLUMN_INDEX_ADDITIONAL_INFO:
-        return QVariant(curQuery->additionalInfo());
+        return QVariant(curQuery->searchObject()->additionalInfo());
         break;
     default:
         break;

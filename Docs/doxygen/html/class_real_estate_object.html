@@ -1,0 +1,839 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>EasyRent: Класс RealEstateObject</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">EasyRent
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="classes.html"><span>Алфавитный&#160;указатель&#160;классов</span></a></li>
+      <li><a href="hierarchy.html"><span>Иерархия&#160;классов</span></a></li>
+      <li><a href="functions.html"><span>Члены&#160;классов</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_real_estate_object.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="class_real_estate_object-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс RealEstateObject</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Объект недвижимости  
+ <a href="class_real_estate_object.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_real_estate_object_8h_source.html">RealEstateObject.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:RealEstateObject:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_real_estate_object.png" usemap="#RealEstateObject_map" alt=""/>
+  <map id="RealEstateObject_map" name="RealEstateObject_map">
+<area href="class_residential_real_estate_object.html" title="Объект жилой недвижимости " alt="ResidentialRealEstateObject" shape="rect" coords="0,112,169,136"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ad00405ae776cdf353ab2ca19ecf9069d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad00405ae776cdf353ab2ca19ecf9069d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>RealEstateObject</b> (QObject *parent=0)</td></tr>
+<tr class="separator:ad00405ae776cdf353ab2ca19ecf9069d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2226c2748668c9466e97222dee0ba2b6"><td class="memItemLeft" align="right" valign="top">RealEstateType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#a2226c2748668c9466e97222dee0ba2b6">realEstateType</a> () const </td></tr>
+<tr class="separator:a2226c2748668c9466e97222dee0ba2b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08cc11ee2b4d39f4f89ed7e8e7258fb9"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#a08cc11ee2b4d39f4f89ed7e8e7258fb9">city</a> () const </td></tr>
+<tr class="separator:a08cc11ee2b4d39f4f89ed7e8e7258fb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa09090bde0220a04a195f6ef2921294b"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#aa09090bde0220a04a195f6ef2921294b">address</a> () const </td></tr>
+<tr class="separator:aa09090bde0220a04a195f6ef2921294b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c4122100208339018d16dad1540d7e1"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#a4c4122100208339018d16dad1540d7e1">floorCount</a> () const </td></tr>
+<tr class="separator:a4c4122100208339018d16dad1540d7e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6bad4a5d9ddd6d4471372307f49c00b"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#af6bad4a5d9ddd6d4471372307f49c00b">firstFloor</a> () const </td></tr>
+<tr class="separator:af6bad4a5d9ddd6d4471372307f49c00b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60252bfe7dffcaf7af6954205376a22c"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#a60252bfe7dffcaf7af6954205376a22c">roomCount</a> () const </td></tr>
+<tr class="separator:a60252bfe7dffcaf7af6954205376a22c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3391e8d741b8ac188d66ec363e1516b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#ab3391e8d741b8ac188d66ec363e1516b">totalSquare</a> () const </td></tr>
+<tr class="separator:ab3391e8d741b8ac188d66ec363e1516b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab8a8480eab99a93b963efaee63d97f8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#aab8a8480eab99a93b963efaee63d97f8">roomSquare</a> (const uint roomNum) const </td></tr>
+<tr class="separator:aab8a8480eab99a93b963efaee63d97f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6ef29b41ed7707c38585c3ae23efce4"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#ad6ef29b41ed7707c38585c3ae23efce4">contactInfo</a> () const </td></tr>
+<tr class="separator:ad6ef29b41ed7707c38585c3ae23efce4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dba4bf79d67d5600aa01b604a9c5cb4"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#a0dba4bf79d67d5600aa01b604a9c5cb4">additionalInfo</a> () const </td></tr>
+<tr class="separator:a0dba4bf79d67d5600aa01b604a9c5cb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dd94ce86fb38300b06316d63c14adf0"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#a6dd94ce86fb38300b06316d63c14adf0">photoCount</a> () const </td></tr>
+<tr class="separator:a6dd94ce86fb38300b06316d63c14adf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d79de474552b6e34293dee2937a2c99"><td class="memItemLeft" align="right" valign="top">QImage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#a1d79de474552b6e34293dee2937a2c99">photo</a> (const uint photoNum) const </td></tr>
+<tr class="separator:a1d79de474552b6e34293dee2937a2c99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1d9de35ac379dde7e9160325e89fcab"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#aa1d9de35ac379dde7e9160325e89fcab">totalRoomsSquare</a> () const </td></tr>
+<tr class="separator:aa1d9de35ac379dde7e9160325e89fcab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6ea66e519df7adf84fd789b0c10e6a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#ad6ea66e519df7adf84fd789b0c10e6a2">deletePhoto</a> (const uint photoNum)</td></tr>
+<tr class="separator:ad6ea66e519df7adf84fd789b0c10e6a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17b90d6d2379661135e07bb7cd10a091"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#a17b90d6d2379661135e07bb7cd10a091">addPhoto</a> (const QImage value)</td></tr>
+<tr class="separator:a17b90d6d2379661135e07bb7cd10a091"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5454e70f3501eb7c50728bbb55bfaed1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#a5454e70f3501eb7c50728bbb55bfaed1">setRealEstateType</a> (const RealEstateType value)</td></tr>
+<tr class="separator:a5454e70f3501eb7c50728bbb55bfaed1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aceda88a360370c6de780d5f8534b8f83"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#aceda88a360370c6de780d5f8534b8f83">setCity</a> (const QString value)</td></tr>
+<tr class="separator:aceda88a360370c6de780d5f8534b8f83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcdc05ad6a8adbdd7bb016c7ddad333e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#abcdc05ad6a8adbdd7bb016c7ddad333e">setAddress</a> (const QString value)</td></tr>
+<tr class="separator:abcdc05ad6a8adbdd7bb016c7ddad333e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9a202f614a0da2fddc09b4efe2ac7d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#af9a202f614a0da2fddc09b4efe2ac7d2">setFloorCount</a> (const uint value)</td></tr>
+<tr class="separator:af9a202f614a0da2fddc09b4efe2ac7d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53ab5353e84de8cf3e996427f28ca96d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#a53ab5353e84de8cf3e996427f28ca96d">setFirstFloor</a> (const uint value)</td></tr>
+<tr class="separator:a53ab5353e84de8cf3e996427f28ca96d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81ef3e33455547a54f700993157b9c74"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#a81ef3e33455547a54f700993157b9c74">setRoomCount</a> (const uint value)</td></tr>
+<tr class="separator:a81ef3e33455547a54f700993157b9c74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5c7f053a1bd8225eacd632ebc712a68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#af5c7f053a1bd8225eacd632ebc712a68">setTotalSquare</a> (const float value)</td></tr>
+<tr class="separator:af5c7f053a1bd8225eacd632ebc712a68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1c0f3580365a147b76e122f0deb7115"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#ac1c0f3580365a147b76e122f0deb7115">setRoomSquare</a> (const uint roomNum, const float value)</td></tr>
+<tr class="separator:ac1c0f3580365a147b76e122f0deb7115"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fa0b488ecf39518dca4e8602423ab1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#a6fa0b488ecf39518dca4e8602423ab1e">setContactInfo</a> (const QString value)</td></tr>
+<tr class="separator:a6fa0b488ecf39518dca4e8602423ab1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accdd99c9b067516a0100ce7fe6fd0c55"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#accdd99c9b067516a0100ce7fe6fd0c55">setAdditionalInfo</a> (const QString value)</td></tr>
+<tr class="separator:accdd99c9b067516a0100ce7fe6fd0c55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed4c19e68282080a62536bdd3e096843"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#aed4c19e68282080a62536bdd3e096843">lastError</a> () const </td></tr>
+<tr class="separator:aed4c19e68282080a62536bdd3e096843"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6877e41f5bf5f66143607d1adcbbcc4f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#a6877e41f5bf5f66143607d1adcbbcc4f">assign</a> (const <a class="el" href="class_real_estate_object.html">RealEstateObject</a> *const source)</td></tr>
+<tr class="separator:a6877e41f5bf5f66143607d1adcbbcc4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74372d4df1326d4a757b42f3bcfc0d1c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#a74372d4df1326d4a757b42f3bcfc0d1c">operator&gt;</a> (const <a class="el" href="class_real_estate_object.html">RealEstateObject</a> *other)</td></tr>
+<tr class="separator:a74372d4df1326d4a757b42f3bcfc0d1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7df07c0ab5f9366e3d064f96e01b3ad"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#ad7df07c0ab5f9366e3d064f96e01b3ad">operator&lt;</a> (const <a class="el" href="class_real_estate_object.html">RealEstateObject</a> *other)</td></tr>
+<tr class="separator:ad7df07c0ab5f9366e3d064f96e01b3ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Объект недвижимости </p>
+</div><h2 class="groupheader">Методы</h2>
+<a class="anchor" id="a0dba4bf79d67d5600aa01b604a9c5cb4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString RealEstateObject::additionalInfo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Получение дополнительной информации об объекте недвижимости </p><dl class="section return"><dt>Возвращает</dt><dd>Дополнительная информация об объекте недвижимости </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a17b90d6d2379661135e07bb7cd10a091"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RealEstateObject::addPhoto </td>
+          <td>(</td>
+          <td class="paramtype">const QImage&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Добавление фотографии </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>Добавляемая фотография </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aa09090bde0220a04a195f6ef2921294b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString RealEstateObject::address </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Получение адреса объекта недвижимости </p><dl class="section return"><dt>Возвращает</dt><dd>Адрес объекта недвижимости </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6877e41f5bf5f66143607d1adcbbcc4f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RealEstateObject::assign </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_real_estate_object.html">RealEstateObject</a> *const&#160;</td>
+          <td class="paramname"><em>source</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Присвоение параметрам этого объекта недвижимости значений из объекта-источника </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>Объект-источник </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>Присвоение параметров прошло успешно </td></tr>
+    <tr><td class="paramname">false</td><td>Присвоение параметров не удалось. Информацию об ошибке можно узнать при помощи lastError </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="class_real_estate_object.html#aed4c19e68282080a62536bdd3e096843">lastError</a> </dd></dl>
+
+<p>Переопределяется в <a class="el" href="class_residential_real_estate_object.html#a2682b729d892a5a1e865d8624c8d7c62">ResidentialRealEstateObject</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a08cc11ee2b4d39f4f89ed7e8e7258fb9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString RealEstateObject::city </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Получение города, в котором расположен объект недвижимости </p><dl class="section return"><dt>Возвращает</dt><dd>Город, в котором расположен объект недвижимости </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad6ef29b41ed7707c38585c3ae23efce4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString RealEstateObject::contactInfo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Получение контактной информации для связи с автором запроса </p><dl class="section return"><dt>Возвращает</dt><dd>Контактная информация для связи с автором запроса </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad6ea66e519df7adf84fd789b0c10e6a2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RealEstateObject::deletePhoto </td>
+          <td>(</td>
+          <td class="paramtype">const uint&#160;</td>
+          <td class="paramname"><em>photoNum</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Удаление фотографии </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">photoNum</td><td>Порядковый номер удаляемой фотографии </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af6bad4a5d9ddd6d4471372307f49c00b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint RealEstateObject::firstFloor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Получение номера первого этажа, занимаемого объектом недвижимости </p><dl class="section return"><dt>Возвращает</dt><dd>Номер первого этажа, занимаемого объектом недвижимости </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4c4122100208339018d16dad1540d7e1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint RealEstateObject::floorCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Получение количества этажей, занимаемых объектом недвижимости </p><dl class="section return"><dt>Возвращает</dt><dd>Количество этажей, занимаемых объектом недвижимости </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aed4c19e68282080a62536bdd3e096843"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString RealEstateObject::lastError </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Получение информации о последней возникшей ошибке </p><dl class="section return"><dt>Возвращает</dt><dd>Информация о последней возникшей ошибке </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad7df07c0ab5f9366e3d064f96e01b3ad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RealEstateObject::operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_real_estate_object.html">RealEstateObject</a> *&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Проверка хуже ли этот объект недвижимости, чем other </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>Объект недвижимости, с которым происходит сравнение </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>Этот объект недвижимости хуже other </td></tr>
+    <tr><td class="paramname">false</td><td>Этот объект недвижимости не хуже other </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a74372d4df1326d4a757b42f3bcfc0d1c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RealEstateObject::operator&gt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_real_estate_object.html">RealEstateObject</a> *&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Проверка лучше ли этот объект недвижимости, чем other </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>Объект недвижимости, с которым происходит сравнение </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>Этот объект недвижимости лучше other </td></tr>
+    <tr><td class="paramname">false</td><td>Этот объект недвижимости не лучше other </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a1d79de474552b6e34293dee2937a2c99"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QImage RealEstateObject::photo </td>
+          <td>(</td>
+          <td class="paramtype">const uint&#160;</td>
+          <td class="paramname"><em>photoNum</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Получение фотографии объекта недвижимости </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">photoNum</td><td>Порядковый номер фотографии </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Фотография объекта недвижимости с указанным порядковым номером </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6dd94ce86fb38300b06316d63c14adf0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint RealEstateObject::photoCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Получение количества фотографий объекта недвижимости </p><dl class="section return"><dt>Возвращает</dt><dd>Количество фотографий объекта недвижимости </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2226c2748668c9466e97222dee0ba2b6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RealEstateType RealEstateObject::realEstateType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Получение типа недвижимости </p><dl class="section return"><dt>Возвращает</dt><dd>Тип недвижимости </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a60252bfe7dffcaf7af6954205376a22c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint RealEstateObject::roomCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Получение количества комнат объекта недвижимости </p><dl class="section return"><dt>Возвращает</dt><dd>Количество комнат объекта недвижимости </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aab8a8480eab99a93b963efaee63d97f8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float RealEstateObject::roomSquare </td>
+          <td>(</td>
+          <td class="paramtype">const uint&#160;</td>
+          <td class="paramname"><em>roomNum</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Получение площади указанной комнаты </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">roomNum</td><td>Порядковый номер комнаты, площадь которой необходимо получить </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Площадь указанной комнаты </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="accdd99c9b067516a0100ce7fe6fd0c55"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RealEstateObject::setAdditionalInfo </td>
+          <td>(</td>
+          <td class="paramtype">const QString&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Изменение дополнительной информации об объекте недвижимости </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>Новая дополнительная информация об объекте недвижимости </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="abcdc05ad6a8adbdd7bb016c7ddad333e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RealEstateObject::setAddress </td>
+          <td>(</td>
+          <td class="paramtype">const QString&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Изменение адреса </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>Новый адрес </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aceda88a360370c6de780d5f8534b8f83"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RealEstateObject::setCity </td>
+          <td>(</td>
+          <td class="paramtype">const QString&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Изменение города </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>Новый город </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a6fa0b488ecf39518dca4e8602423ab1e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RealEstateObject::setContactInfo </td>
+          <td>(</td>
+          <td class="paramtype">const QString&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Изменение контактной информации для связи с автором запроса </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>Новая контактная информация для связи с автором запроса </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a53ab5353e84de8cf3e996427f28ca96d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RealEstateObject::setFirstFloor </td>
+          <td>(</td>
+          <td class="paramtype">const uint&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Изменение номера первого этажа, занимаемого объектом недвижимости </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>Новый номер первого этажа, занимаемого объектом недвижимости </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af9a202f614a0da2fddc09b4efe2ac7d2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RealEstateObject::setFloorCount </td>
+          <td>(</td>
+          <td class="paramtype">const uint&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Изменение количества этажей </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>Новое количество этажей </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a5454e70f3501eb7c50728bbb55bfaed1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RealEstateObject::setRealEstateType </td>
+          <td>(</td>
+          <td class="paramtype">const RealEstateType&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Изменение типа объекта недвижимости </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>Новый тип объекта недвижимости </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a81ef3e33455547a54f700993157b9c74"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RealEstateObject::setRoomCount </td>
+          <td>(</td>
+          <td class="paramtype">const uint&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Изменение количества комнат </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>Новое количество комнат </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac1c0f3580365a147b76e122f0deb7115"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RealEstateObject::setRoomSquare </td>
+          <td>(</td>
+          <td class="paramtype">const uint&#160;</td>
+          <td class="paramname"><em>roomNum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Изменение площади комнаты </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">roomNum</td><td>Порядковый номер комнаты, площадь которой необходимо изменить </td></tr>
+    <tr><td class="paramname">value</td><td>Новое значение площади комнаты </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af5c7f053a1bd8225eacd632ebc712a68"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RealEstateObject::setTotalSquare </td>
+          <td>(</td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Изменение общей площади объекта недвижимости </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>Новое значение общей площади </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aa1d9de35ac379dde7e9160325e89fcab"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float RealEstateObject::totalRoomsSquare </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Получение общей площади всех помещений </p><dl class="section return"><dt>Возвращает</dt><dd>Общая площадь всех помещений </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab3391e8d741b8ac188d66ec363e1516b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float RealEstateObject::totalSquare </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Получение общей площади объекта недвижимости </p><dl class="section return"><dt>Возвращает</dt><dd>Общая площадь объекта недвижимости </dd></dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>D:/EasyRent/src/<a class="el" href="_real_estate_object_8h_source.html">RealEstateObject.h</a></li>
+<li>D:/EasyRent/src/RealEstateObject.cpp</li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_real_estate_object.html">RealEstateObject</a></li>
+    <li class="footer">Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+  </ul>
+</div>
+</body>
+</html>

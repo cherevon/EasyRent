@@ -12,18 +12,24 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = EasyRent
 TEMPLATE = app
 
-SOURCES += RealEstateQuery.cpp \
+SOURCES += \
     main.cpp \
     MainWindow.cpp \
     FormUserQueries.cpp \
-    RealEstateQueryModel.cpp \
-    CreateUserQueryDialog.cpp
+    RealEstateObject.cpp \
+    ResidentialRealEstateObject.cpp \
+    RealEstateQuery.cpp \
+    DlgUserQueryEditor.cpp \
+    RealEstateQueryModel.cpp
 
-HEADERS += RealEstateQuery.h \
+HEADERS += \
     MainWindow.h \
     FormUserQueries.h \
-    RealEstateQueryModel.h \
-    CreateUserQueryDialog.h
+    RealEstateObject.h \
+    ResidentialRealEstateObject.h \
+    RealEstateQuery.h \
+    DlgUserQueryEditor.h \
+    RealEstateQueryModel.h
 
 OTHER_FILES +=
 
@@ -32,7 +38,7 @@ CONFIG += c++11
 FORMS += \
     MainWindow.ui \
     FormUserQueries.ui \
-    CreateUserQueryDialog.ui
+    DlgUserQueryEditor.ui
 
 RESOURCES += \
     resources.qrc

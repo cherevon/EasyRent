@@ -35,6 +35,6 @@ void MainWindow::addUserTask(QAction* newTask)
         taskButton->setText(newTask->text());
 //        taskButton->addAction(newTask);
         connect(taskButton, SIGNAL(clicked()), newTask, SLOT(trigger()));
-        ui->layoutTasks->addWidget(taskButton);
+//        ui->layoutTasks->addWidget(taskButton);
     }
 }

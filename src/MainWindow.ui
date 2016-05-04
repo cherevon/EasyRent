@@ -67,9 +67,6 @@
       </property>
      </spacer>
     </item>
-    <item row="1" column="2">
-     <layout class="QGridLayout" name="layoutTasks"/>
-    </item>
    </layout>
   </widget>
   <action name="actMyQueries">

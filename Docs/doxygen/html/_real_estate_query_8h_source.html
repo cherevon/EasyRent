@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>EasyRent: Исходный файл D:/EasyRent/src/RealEstateQuery.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">EasyRent
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_real_estate_query_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">RealEstateQuery.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef REALESTATEQUERY_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define REALESTATEQUERY_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;QObject&gt;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;RealEstateObject.h&quot;</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">enum</span> QueryType</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    SELL,</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    BUY,</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    SELL_RENT,</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    BUY_RENT</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;};</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> QUERY_MATCHES_COUNT = 3;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">const</span> QueryType QUERY_MATCHES_TABLE[3][2] =</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    {</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        {SELL, BUY},</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        {SELL, BUY_RENT},</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        {SELL_RENT, BUY_RENT}</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    };</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div><div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_real_estate_query.html">   34</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_real_estate_query.html">RealEstateQuery</a> : <span class="keyword">public</span> QObject</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    Q_OBJECT</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    QueryType fQueryType;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    QDateTime fCreateDate;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    uint fPrice;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    QString fSource;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="class_real_estate_object.html">RealEstateObject</a>* fSearchObject;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_real_estate_query.html">RealEstateQuery</a>(QObject *parent = 0);</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="class_real_estate_object.html">RealEstateObject</a> *<a class="code" href="class_real_estate_query.html#a07ba31ccb51f53a46d44647015740ffe">searchObject</a>() <span class="keyword">const</span>;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    QString <a class="code" href="class_real_estate_query.html#a20741853335fa2de3259584e3206ae05">source</a>() <span class="keyword">const</span>;</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    uint <a class="code" href="class_real_estate_query.html#a746c418c2ec597627b69f9dab7b55d3e">price</a>() <span class="keyword">const</span>;</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    QDateTime <a class="code" href="class_real_estate_query.html#a344d89cbb7053b612c55dc31ece20863">createDate</a>() <span class="keyword">const</span>;</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    QueryType <a class="code" href="class_real_estate_query.html#a3e23a3b2046d14e96a97f06d75a06f16">queryType</a>() <span class="keyword">const</span>;</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_real_estate_query.html#a058ae2f5e4400b0b3d60cc6d4c93621c">setSearchObject</a>(<a class="code" href="class_real_estate_object.html">RealEstateObject</a> * <span class="keyword">const</span> value);</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_real_estate_query.html#a419281e3c64a7306bd7070a6e81eb333">setCreateDate</a>(<span class="keyword">const</span> QDateTime value);</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_real_estate_query.html#a444f011e1163994ace69199aed4db545">setPrice</a>(<span class="keyword">const</span> uint value);</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_real_estate_query.html#a115767771b266193b3a1c08ea183f3bb">setSource</a>(<span class="keyword">const</span> QString value);</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_real_estate_query.html#aae4be771bc467a5a434d0c624d7fd2f6">setQueryType</a>(<span class="keyword">const</span> QueryType value);</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_real_estate_query.html#a3fc0692f0f1e1c8599e731a0a34c73a3">matches</a>(<span class="keyword">const</span> <a class="code" href="class_real_estate_query.html">RealEstateQuery</a>* query) <span class="keyword">const</span>;</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;};</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;QString queryTypeToString(<span class="keyword">const</span> QueryType&amp; queryt);</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;QStringList availableQueryTypesStrings();</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">#endif // REALESTATEQUERY_H</span></div><div class="ttc" id="class_real_estate_query_html_a419281e3c64a7306bd7070a6e81eb333"><div class="ttname"><a href="class_real_estate_query.html#a419281e3c64a7306bd7070a6e81eb333">RealEstateQuery::setCreateDate</a></div><div class="ttdeci">void setCreateDate(const QDateTime value)</div><div class="ttdef"><b>Definition:</b> RealEstateQuery.cpp:49</div></div>
+<div class="ttc" id="class_real_estate_query_html_a3fc0692f0f1e1c8599e731a0a34c73a3"><div class="ttname"><a href="class_real_estate_query.html#a3fc0692f0f1e1c8599e731a0a34c73a3">RealEstateQuery::matches</a></div><div class="ttdeci">bool matches(const RealEstateQuery *query) const </div><div class="ttdef"><b>Definition:</b> RealEstateQuery.cpp:73</div></div>
+<div class="ttc" id="class_real_estate_object_html"><div class="ttname"><a href="class_real_estate_object.html">RealEstateObject</a></div><div class="ttdoc">Объект недвижимости </div><div class="ttdef"><b>Definition:</b> RealEstateObject.h:23</div></div>
+<div class="ttc" id="class_real_estate_query_html_a3e23a3b2046d14e96a97f06d75a06f16"><div class="ttname"><a href="class_real_estate_query.html#a3e23a3b2046d14e96a97f06d75a06f16">RealEstateQuery::queryType</a></div><div class="ttdeci">QueryType queryType() const </div><div class="ttdef"><b>Definition:</b> RealEstateQuery.cpp:37</div></div>
+<div class="ttc" id="class_real_estate_query_html"><div class="ttname"><a href="class_real_estate_query.html">RealEstateQuery</a></div><div class="ttdoc">Запрос для поиска объекта недвижимости </div><div class="ttdef"><b>Definition:</b> RealEstateQuery.h:34</div></div>
+<div class="ttc" id="class_real_estate_query_html_a20741853335fa2de3259584e3206ae05"><div class="ttname"><a href="class_real_estate_query.html#a20741853335fa2de3259584e3206ae05">RealEstateQuery::source</a></div><div class="ttdeci">QString source() const </div><div class="ttdef"><b>Definition:</b> RealEstateQuery.cpp:20</div></div>
+<div class="ttc" id="class_real_estate_query_html_a444f011e1163994ace69199aed4db545"><div class="ttname"><a href="class_real_estate_query.html#a444f011e1163994ace69199aed4db545">RealEstateQuery::setPrice</a></div><div class="ttdeci">void setPrice(const uint value)</div><div class="ttdef"><b>Definition:</b> RealEstateQuery.cpp:55</div></div>
+<div class="ttc" id="class_real_estate_query_html_aae4be771bc467a5a434d0c624d7fd2f6"><div class="ttname"><a href="class_real_estate_query.html#aae4be771bc467a5a434d0c624d7fd2f6">RealEstateQuery::setQueryType</a></div><div class="ttdeci">void setQueryType(const QueryType value)</div><div class="ttdef"><b>Definition:</b> RealEstateQuery.cpp:67</div></div>
+<div class="ttc" id="class_real_estate_query_html_a07ba31ccb51f53a46d44647015740ffe"><div class="ttname"><a href="class_real_estate_query.html#a07ba31ccb51f53a46d44647015740ffe">RealEstateQuery::searchObject</a></div><div class="ttdeci">RealEstateObject * searchObject() const </div><div class="ttdef"><b>Definition:</b> RealEstateQuery.cpp:14</div></div>
+<div class="ttc" id="class_real_estate_query_html_a115767771b266193b3a1c08ea183f3bb"><div class="ttname"><a href="class_real_estate_query.html#a115767771b266193b3a1c08ea183f3bb">RealEstateQuery::setSource</a></div><div class="ttdeci">void setSource(const QString value)</div><div class="ttdef"><b>Definition:</b> RealEstateQuery.cpp:61</div></div>
+<div class="ttc" id="class_real_estate_query_html_a344d89cbb7053b612c55dc31ece20863"><div class="ttname"><a href="class_real_estate_query.html#a344d89cbb7053b612c55dc31ece20863">RealEstateQuery::createDate</a></div><div class="ttdeci">QDateTime createDate() const </div><div class="ttdef"><b>Definition:</b> RealEstateQuery.cpp:31</div></div>
+<div class="ttc" id="class_real_estate_query_html_a058ae2f5e4400b0b3d60cc6d4c93621c"><div class="ttname"><a href="class_real_estate_query.html#a058ae2f5e4400b0b3d60cc6d4c93621c">RealEstateQuery::setSearchObject</a></div><div class="ttdeci">void setSearchObject(RealEstateObject *const value)</div><div class="ttdef"><b>Definition:</b> RealEstateQuery.cpp:43</div></div>
+<div class="ttc" id="class_real_estate_query_html_a746c418c2ec597627b69f9dab7b55d3e"><div class="ttname"><a href="class_real_estate_query.html#a746c418c2ec597627b69f9dab7b55d3e">RealEstateQuery::price</a></div><div class="ttdeci">uint price() const </div><div class="ttdef"><b>Definition:</b> RealEstateQuery.cpp:25</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><b>RealEstateQuery.h</b></li>
+    <li class="footer">Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+  </ul>
+</div>
+</body>
+</html>
