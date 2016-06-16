@@ -16,7 +16,14 @@ RealEstateQuery::RealEstateQuery(QObject *parent) : QObject(parent)
     fQueryType = QUERY_SELL;
     fSearchObject = NULL;
     fSource = "";
+    fID = "";
     fPrice = 0;
+}
+
+
+QString RealEstateQuery::ID() const
+{
+    return fID;
 }
 
 
@@ -46,6 +53,12 @@ QDateTime RealEstateQuery::createDate() const
 QueryType RealEstateQuery::queryType() const
 {
     return fQueryType;
+}
+
+
+void RealEstateQuery::setID(const QString &value)
+{
+    fID = value;
 }
 
 

@@ -1,23 +1,12 @@
 var searchData=
 [
-  ['searchobject',['searchObject',['../class_real_estate_query.html#a07ba31ccb51f53a46d44647015740ffe',1,'RealEstateQuery']]],
-  ['setadditionalinfo',['setAdditionalInfo',['../class_real_estate_object.html#accdd99c9b067516a0100ce7fe6fd0c55',1,'RealEstateObject']]],
-  ['setaddress',['setAddress',['../class_real_estate_object.html#abcdc05ad6a8adbdd7bb016c7ddad333e',1,'RealEstateObject']]],
-  ['setcity',['setCity',['../class_real_estate_object.html#aceda88a360370c6de780d5f8534b8f83',1,'RealEstateObject']]],
-  ['setcontactinfo',['setContactInfo',['../class_real_estate_object.html#a6fa0b488ecf39518dca4e8602423ab1e',1,'RealEstateObject']]],
-  ['setcreatedate',['setCreateDate',['../class_real_estate_query.html#a419281e3c64a7306bd7070a6e81eb333',1,'RealEstateQuery']]],
-  ['seteditquery',['setEditQuery',['../class_dlg_user_query_editor.html#ab87fa572c3bdabf8566de5722e42ca0b',1,'DlgUserQueryEditor']]],
-  ['setfirstfloor',['setFirstFloor',['../class_real_estate_object.html#a53ab5353e84de8cf3e996427f28ca96d',1,'RealEstateObject']]],
-  ['setfloorcount',['setFloorCount',['../class_real_estate_object.html#af9a202f614a0da2fddc09b4efe2ac7d2',1,'RealEstateObject']]],
-  ['setkitchencount',['setKitchenCount',['../class_residential_real_estate_object.html#a1e87ff6d5b46ae1f863a32bb716e710e',1,'ResidentialRealEstateObject']]],
-  ['setkitchensquare',['setKitchenSquare',['../class_residential_real_estate_object.html#a5f35afe35aff3faba02fc6c196847d76',1,'ResidentialRealEstateObject']]],
-  ['setprice',['setPrice',['../class_real_estate_query.html#a444f011e1163994ace69199aed4db545',1,'RealEstateQuery']]],
-  ['setquerytype',['setQueryType',['../class_real_estate_query.html#aae4be771bc467a5a434d0c624d7fd2f6',1,'RealEstateQuery']]],
-  ['setrealestatetype',['setRealEstateType',['../class_real_estate_object.html#a5454e70f3501eb7c50728bbb55bfaed1',1,'RealEstateObject']]],
-  ['setroomcount',['setRoomCount',['../class_real_estate_object.html#a81ef3e33455547a54f700993157b9c74',1,'RealEstateObject']]],
-  ['setroomsquare',['setRoomSquare',['../class_real_estate_object.html#ac1c0f3580365a147b76e122f0deb7115',1,'RealEstateObject']]],
-  ['setsearchobject',['setSearchObject',['../class_real_estate_query.html#a058ae2f5e4400b0b3d60cc6d4c93621c',1,'RealEstateQuery']]],
-  ['setsource',['setSource',['../class_real_estate_query.html#a115767771b266193b3a1c08ea183f3bb',1,'RealEstateQuery']]],
-  ['settotalsquare',['setTotalSquare',['../class_real_estate_object.html#af5c7f053a1bd8225eacd632ebc712a68',1,'RealEstateObject']]],
-  ['source',['source',['../class_real_estate_query.html#a20741853335fa2de3259584e3206ae05',1,'RealEstateQuery']]]
+  ['realestateobject',['RealEstateObject',['../class_real_estate_object.html',1,'']]],
+  ['realestatequery',['RealEstateQuery',['../class_real_estate_query.html',1,'']]],
+  ['realestatequerymodel',['RealEstateQueryModel',['../class_real_estate_query_model.html',1,'']]],
+  ['realestatetype',['realEstateType',['../class_real_estate_object.html#a2226c2748668c9466e97222dee0ba2b6',1,'RealEstateObject']]],
+  ['realestateuserquerystorage',['RealEstateUserQueryStorage',['../class_real_estate_user_query_storage.html',1,'']]],
+  ['refreshinfo',['refreshInfo',['../class_dlg_real_estate_query_editor.html#aef0487453a37adad6be534612731b13f',1,'DlgRealEstateQueryEditor']]],
+  ['residentialrealestateobject',['ResidentialRealEstateObject',['../class_residential_real_estate_object.html',1,'']]],
+  ['roomcount',['roomCount',['../class_real_estate_object.html#a60252bfe7dffcaf7af6954205376a22c',1,'RealEstateObject']]],
+  ['roomsquare',['roomSquare',['../class_real_estate_object.html#ac0a94064c687402126a1f2105cc76ea0',1,'RealEstateObject']]]
 ];

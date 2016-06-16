@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['photo',['photo',['../class_real_estate_object.html#a1d79de474552b6e34293dee2937a2c99',1,'RealEstateObject']]],
-  ['photocount',['photoCount',['../class_real_estate_object.html#a6dd94ce86fb38300b06316d63c14adf0',1,'RealEstateObject']]],
-  ['price',['price',['../class_real_estate_query.html#a746c418c2ec597627b69f9dab7b55d3e',1,'RealEstateQuery']]]
+  ['operator_3c',['operator&lt;',['../class_real_estate_object.html#af3c92e5ea54a8c5d72d301c8fc0c24b6',1,'RealEstateObject']]],
+  ['operator_3e',['operator&gt;',['../class_real_estate_object.html#ad7dab5d556a4e05834d05c61183db1dc',1,'RealEstateObject']]]
 ];

@@ -18,7 +18,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_dlg_user_query_editor_8h_source.html"
+"_dlg_real_estate_query_editor_8h_source.html"
 ];
 
 var SYNCONMSG = 'нажмите на выключить для синхронизации панелей';

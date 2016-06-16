@@ -27,6 +27,7 @@ private:
 
 public slots:
     void newUserQuery();
+    void showQueryInfo(QModelIndex index);
 };
 
 #endif // FORMUSERQUERIES_H

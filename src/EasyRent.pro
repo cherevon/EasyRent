@@ -19,8 +19,8 @@ SOURCES += \
     RealEstateObject.cpp \
     ResidentialRealEstateObject.cpp \
     RealEstateQuery.cpp \
-    DlgUserQueryEditor.cpp \
-    RealEstateQueryModel.cpp
+    RealEstateQueryModel.cpp \
+    DlgRealEstateQueryEditor.cpp
 
 HEADERS += \
     MainWindow.h \
@@ -28,8 +28,9 @@ HEADERS += \
     RealEstateObject.h \
     ResidentialRealEstateObject.h \
     RealEstateQuery.h \
-    DlgUserQueryEditor.h \
-    RealEstateQueryModel.h
+    RealEstateQueryModel.h \
+    DlgRealEstateQueryEditor.h \
+    RealEstateQueryStorage.h
 
 OTHER_FILES +=
 
@@ -38,7 +39,7 @@ CONFIG += c++11
 FORMS += \
     MainWindow.ui \
     FormUserQueries.ui \
-    DlgUserQueryEditor.ui
+    DlgRealEstateQueryEditor.ui
 
 RESOURCES += \
     resources.qrc

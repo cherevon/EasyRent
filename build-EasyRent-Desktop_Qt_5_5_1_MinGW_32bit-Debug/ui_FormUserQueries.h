@@ -13,11 +13,12 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QFrame>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QTableView>
 #include <QtWidgets/QWidget>
-#include "DlgUserQueryEditor.h"
+#include "DlgRealEstateQueryEditor.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -26,7 +27,8 @@ class Ui_FormUserQueries
 public:
     QHBoxLayout *horizontalLayout;
     QTableView *tvQueries;
-    DlgUserQueryEditor *widget;
+    QFrame *line;
+    DlgRealEstateQueryEditor *widget;
 
     void setupUi(QWidget *FormUserQueries)
     {
@@ -42,7 +44,14 @@ public:
 
         horizontalLayout->addWidget(tvQueries);
 
-        widget = new DlgUserQueryEditor(FormUserQueries);
+        line = new QFrame(FormUserQueries);
+        line->setObjectName(QStringLiteral("line"));
+        line->setFrameShape(QFrame::VLine);
+        line->setFrameShadow(QFrame::Sunken);
+
+        horizontalLayout->addWidget(line);
+
+        widget = new DlgRealEstateQueryEditor(FormUserQueries);
         widget->setObjectName(QStringLiteral("widget"));
 
         horizontalLayout->addWidget(widget);

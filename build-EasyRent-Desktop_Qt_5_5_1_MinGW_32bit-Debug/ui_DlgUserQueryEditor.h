@@ -410,7 +410,7 @@ public:
 };
 
 namespace Ui {
-    class DlgUserQueryEditor: public Ui_DlgUserQueryEditor {};
+    class DlgRealEstateQueryEditor: public Ui_DlgUserQueryEditor {};
 } // namespace Ui
 
 QT_END_NAMESPACE

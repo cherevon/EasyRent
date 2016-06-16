@@ -51,6 +51,8 @@ class RealEstateQuery : public QObject
     Q_OBJECT
 
 private:
+    /// Идентификатор запроса
+    QString fID;
     /// Тип запроса
     QueryType fQueryType;
     /// Дата создания запроса
@@ -73,6 +75,11 @@ protected:
 public:
     explicit RealEstateQuery(QObject *parent = 0);
 
+    /** Получение идентификатора запроса
+     * @return Идентификатор запроса
+     * @remarks Позволяет уникальным образом идентифицировать запрос в источнике
+     */
+    QString ID() const;
     /** Получение искомого объекта недвижимости
      * @return Искомый объект недвижимости
      */
@@ -94,6 +101,10 @@ public:
      */
     QueryType queryType() const;
 
+    /** Смена идентификатора запроса
+     * @param value Новый идентификатор запроса
+     */
+    void setID(const QString &value);
     /** Смена искомого объекта недвижимости
      * @param value Новый искомый объект недвижимости
      */

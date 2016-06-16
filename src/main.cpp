@@ -1,5 +1,5 @@
 #include <QApplication>
-#include "DlgUserQueryEditor.h"
+#include "DlgRealEstateQueryEditor.h"
 #include "ResidentialRealEstateObject.h"
 #include "FormUserQueries.h"
 #include <QSqlDatabase>
@@ -7,6 +7,7 @@
 #include <QSqlError>
 #include <QMessageBox>
 #include <QObject>
+#include "RealEstateQueryStorage.h"
 
 /// Инициализация базы данных
 void initializeDB()

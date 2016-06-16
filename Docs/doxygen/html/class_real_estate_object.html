@@ -105,7 +105,9 @@ $(document).ready(function(){initNavTree('class_real_estate_object.html','');});
 
 <div class="header">
   <div class="summary">
+<a href="#signals">Сигналы</a> &#124;
 <a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pro-methods">Защищенные члены</a> &#124;
 <a href="class_real_estate_object-members.html">Полный список членов класса</a>  </div>
   <div class="headertitle">
 <div class="title">Класс RealEstateObject</div>  </div>
@@ -126,6 +128,13 @@ $(document).ready(function(){initNavTree('class_real_estate_object.html','');});
 </map>
  </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
+Сигналы</h2></td></tr>
+<tr class="memitem:a000c660f8f07674d4369b5f40bcd8907"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a000c660f8f07674d4369b5f40bcd8907"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#a000c660f8f07674d4369b5f40bcd8907">changed</a> ()</td></tr>
+<tr class="memdesc:a000c660f8f07674d4369b5f40bcd8907"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сигнал, возникающий при изменении объекта недвижимости <br /></td></tr>
+<tr class="separator:a000c660f8f07674d4369b5f40bcd8907"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Открытые члены</h2></td></tr>
 <tr class="memitem:ad00405ae776cdf353ab2ca19ecf9069d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad00405ae776cdf353ab2ca19ecf9069d"></a>
@@ -145,50 +154,55 @@ $(document).ready(function(){initNavTree('class_real_estate_object.html','');});
 <tr class="separator:a60252bfe7dffcaf7af6954205376a22c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3391e8d741b8ac188d66ec363e1516b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#ab3391e8d741b8ac188d66ec363e1516b">totalSquare</a> () const </td></tr>
 <tr class="separator:ab3391e8d741b8ac188d66ec363e1516b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab8a8480eab99a93b963efaee63d97f8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#aab8a8480eab99a93b963efaee63d97f8">roomSquare</a> (const uint roomNum) const </td></tr>
-<tr class="separator:aab8a8480eab99a93b963efaee63d97f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0a94064c687402126a1f2105cc76ea0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#ac0a94064c687402126a1f2105cc76ea0">roomSquare</a> (const uint &amp;roomNum) const </td></tr>
+<tr class="separator:ac0a94064c687402126a1f2105cc76ea0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6ef29b41ed7707c38585c3ae23efce4"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#ad6ef29b41ed7707c38585c3ae23efce4">contactInfo</a> () const </td></tr>
 <tr class="separator:ad6ef29b41ed7707c38585c3ae23efce4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0dba4bf79d67d5600aa01b604a9c5cb4"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#a0dba4bf79d67d5600aa01b604a9c5cb4">additionalInfo</a> () const </td></tr>
 <tr class="separator:a0dba4bf79d67d5600aa01b604a9c5cb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6dd94ce86fb38300b06316d63c14adf0"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#a6dd94ce86fb38300b06316d63c14adf0">photoCount</a> () const </td></tr>
 <tr class="separator:a6dd94ce86fb38300b06316d63c14adf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d79de474552b6e34293dee2937a2c99"><td class="memItemLeft" align="right" valign="top">QImage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#a1d79de474552b6e34293dee2937a2c99">photo</a> (const uint photoNum) const </td></tr>
-<tr class="separator:a1d79de474552b6e34293dee2937a2c99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86bd1a7786fa2996c0e7e700c9a7e487"><td class="memItemLeft" align="right" valign="top">QImage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#a86bd1a7786fa2996c0e7e700c9a7e487">photo</a> (const uint &amp;photoNum) const </td></tr>
+<tr class="separator:a86bd1a7786fa2996c0e7e700c9a7e487"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1d9de35ac379dde7e9160325e89fcab"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#aa1d9de35ac379dde7e9160325e89fcab">totalRoomsSquare</a> () const </td></tr>
 <tr class="separator:aa1d9de35ac379dde7e9160325e89fcab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6ea66e519df7adf84fd789b0c10e6a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#ad6ea66e519df7adf84fd789b0c10e6a2">deletePhoto</a> (const uint photoNum)</td></tr>
-<tr class="separator:ad6ea66e519df7adf84fd789b0c10e6a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17b90d6d2379661135e07bb7cd10a091"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#a17b90d6d2379661135e07bb7cd10a091">addPhoto</a> (const QImage value)</td></tr>
-<tr class="separator:a17b90d6d2379661135e07bb7cd10a091"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5454e70f3501eb7c50728bbb55bfaed1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#a5454e70f3501eb7c50728bbb55bfaed1">setRealEstateType</a> (const RealEstateType value)</td></tr>
-<tr class="separator:a5454e70f3501eb7c50728bbb55bfaed1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aceda88a360370c6de780d5f8534b8f83"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#aceda88a360370c6de780d5f8534b8f83">setCity</a> (const QString value)</td></tr>
-<tr class="separator:aceda88a360370c6de780d5f8534b8f83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abcdc05ad6a8adbdd7bb016c7ddad333e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#abcdc05ad6a8adbdd7bb016c7ddad333e">setAddress</a> (const QString value)</td></tr>
-<tr class="separator:abcdc05ad6a8adbdd7bb016c7ddad333e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9a202f614a0da2fddc09b4efe2ac7d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#af9a202f614a0da2fddc09b4efe2ac7d2">setFloorCount</a> (const uint value)</td></tr>
-<tr class="separator:af9a202f614a0da2fddc09b4efe2ac7d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53ab5353e84de8cf3e996427f28ca96d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#a53ab5353e84de8cf3e996427f28ca96d">setFirstFloor</a> (const uint value)</td></tr>
-<tr class="separator:a53ab5353e84de8cf3e996427f28ca96d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81ef3e33455547a54f700993157b9c74"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#a81ef3e33455547a54f700993157b9c74">setRoomCount</a> (const uint value)</td></tr>
-<tr class="separator:a81ef3e33455547a54f700993157b9c74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5c7f053a1bd8225eacd632ebc712a68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#af5c7f053a1bd8225eacd632ebc712a68">setTotalSquare</a> (const float value)</td></tr>
-<tr class="separator:af5c7f053a1bd8225eacd632ebc712a68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1c0f3580365a147b76e122f0deb7115"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#ac1c0f3580365a147b76e122f0deb7115">setRoomSquare</a> (const uint roomNum, const float value)</td></tr>
-<tr class="separator:ac1c0f3580365a147b76e122f0deb7115"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6fa0b488ecf39518dca4e8602423ab1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#a6fa0b488ecf39518dca4e8602423ab1e">setContactInfo</a> (const QString value)</td></tr>
-<tr class="separator:a6fa0b488ecf39518dca4e8602423ab1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:accdd99c9b067516a0100ce7fe6fd0c55"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#accdd99c9b067516a0100ce7fe6fd0c55">setAdditionalInfo</a> (const QString value)</td></tr>
-<tr class="separator:accdd99c9b067516a0100ce7fe6fd0c55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3404f0dac13cae08f7bcfc831d5be0e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#a3404f0dac13cae08f7bcfc831d5be0e0">deletePhoto</a> (const uint &amp;photoNum)</td></tr>
+<tr class="separator:a3404f0dac13cae08f7bcfc831d5be0e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af80c050a28e2b3796fc11cb0f3bfe027"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#af80c050a28e2b3796fc11cb0f3bfe027">addPhoto</a> (const QImage &amp;value)</td></tr>
+<tr class="separator:af80c050a28e2b3796fc11cb0f3bfe027"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1329d183e86b9e09fec3efc610bec741"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#a1329d183e86b9e09fec3efc610bec741">setRealEstateType</a> (const RealEstateType &amp;value)</td></tr>
+<tr class="separator:a1329d183e86b9e09fec3efc610bec741"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a815b67179f60c80c71edbdaa12ae7485"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#a815b67179f60c80c71edbdaa12ae7485">setCity</a> (const QString &amp;value)</td></tr>
+<tr class="separator:a815b67179f60c80c71edbdaa12ae7485"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d2c0d03a145e7d0151831f29943cba3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#a3d2c0d03a145e7d0151831f29943cba3">setAddress</a> (const QString &amp;value)</td></tr>
+<tr class="separator:a3d2c0d03a145e7d0151831f29943cba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57410b976fe637ce9d10c11e4d3b6483"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#a57410b976fe637ce9d10c11e4d3b6483">setFloorCount</a> (const uint &amp;value)</td></tr>
+<tr class="separator:a57410b976fe637ce9d10c11e4d3b6483"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4d79d28e51c60bc5e4eff7f94a70622"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#ac4d79d28e51c60bc5e4eff7f94a70622">setFirstFloor</a> (const uint &amp;value)</td></tr>
+<tr class="separator:ac4d79d28e51c60bc5e4eff7f94a70622"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7703f20cced8571da0c4c22bbc41373"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#ad7703f20cced8571da0c4c22bbc41373">setRoomCount</a> (const uint &amp;value)</td></tr>
+<tr class="separator:ad7703f20cced8571da0c4c22bbc41373"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ac3141ae3b933c439de94512c136519"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#a3ac3141ae3b933c439de94512c136519">setTotalSquare</a> (const float &amp;value)</td></tr>
+<tr class="separator:a3ac3141ae3b933c439de94512c136519"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a808be85b68f22e703bf9e44103b91b01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#a808be85b68f22e703bf9e44103b91b01">setRoomSquare</a> (const uint &amp;roomNum, const float &amp;value)</td></tr>
+<tr class="separator:a808be85b68f22e703bf9e44103b91b01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0497815895503639fe044a36a2d8e848"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#a0497815895503639fe044a36a2d8e848">setContactInfo</a> (const QString &amp;value)</td></tr>
+<tr class="separator:a0497815895503639fe044a36a2d8e848"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c926793ad740dbf02c382a1b98efd2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#a9c926793ad740dbf02c382a1b98efd2e">setAdditionalInfo</a> (const QString &amp;value)</td></tr>
+<tr class="separator:a9c926793ad740dbf02c382a1b98efd2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed4c19e68282080a62536bdd3e096843"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#aed4c19e68282080a62536bdd3e096843">lastError</a> () const </td></tr>
 <tr class="separator:aed4c19e68282080a62536bdd3e096843"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6877e41f5bf5f66143607d1adcbbcc4f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#a6877e41f5bf5f66143607d1adcbbcc4f">assign</a> (const <a class="el" href="class_real_estate_object.html">RealEstateObject</a> *const source)</td></tr>
 <tr class="separator:a6877e41f5bf5f66143607d1adcbbcc4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74372d4df1326d4a757b42f3bcfc0d1c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#a74372d4df1326d4a757b42f3bcfc0d1c">operator&gt;</a> (const <a class="el" href="class_real_estate_object.html">RealEstateObject</a> *other)</td></tr>
-<tr class="separator:a74372d4df1326d4a757b42f3bcfc0d1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7df07c0ab5f9366e3d064f96e01b3ad"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#ad7df07c0ab5f9366e3d064f96e01b3ad">operator&lt;</a> (const <a class="el" href="class_real_estate_object.html">RealEstateObject</a> *other)</td></tr>
-<tr class="separator:ad7df07c0ab5f9366e3d064f96e01b3ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7dab5d556a4e05834d05c61183db1dc"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#ad7dab5d556a4e05834d05c61183db1dc">operator&gt;</a> (const <a class="el" href="class_real_estate_object.html">RealEstateObject</a> *const other)</td></tr>
+<tr class="separator:ad7dab5d556a4e05834d05c61183db1dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3c92e5ea54a8c5d72d301c8fc0c24b6"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#af3c92e5ea54a8c5d72d301c8fc0c24b6">operator&lt;</a> (const <a class="el" href="class_real_estate_object.html">RealEstateObject</a> *const other)</td></tr>
+<tr class="separator:af3c92e5ea54a8c5d72d301c8fc0c24b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Защищенные члены</h2></td></tr>
+<tr class="memitem:aba7ddf02b96a27738b5a71b8ee5c2824"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_real_estate_object.html#aba7ddf02b96a27738b5a71b8ee5c2824">setLastError</a> (const QString &amp;value)</td></tr>
+<tr class="separator:aba7ddf02b96a27738b5a71b8ee5c2824"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
 <div class="textblock"><p>Объект недвижимости </p>
@@ -209,14 +223,14 @@ $(document).ready(function(){initNavTree('class_real_estate_object.html','');});
 
 </div>
 </div>
-<a class="anchor" id="a17b90d6d2379661135e07bb7cd10a091"></a>
+<a class="anchor" id="af80c050a28e2b3796fc11cb0f3bfe027"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void RealEstateObject::addPhoto </td>
           <td>(</td>
-          <td class="paramtype">const QImage&#160;</td>
+          <td class="paramtype">const QImage &amp;&#160;</td>
           <td class="paramname"><em>value</em></td><td>)</td>
           <td></td>
         </tr>
@@ -281,6 +295,7 @@ $(document).ready(function(){initNavTree('class_real_estate_object.html','');});
   </table>
   </dd>
 </dl>
+<dl class="section remark"><dt>Прим.</dt><dd>В случае неудачи присвоения параметров, состояние этого объекта недвижимости не изменяется </dd></dl>
 <dl class="section see"><dt>См. также</dt><dd><a class="el" href="class_real_estate_object.html#aed4c19e68282080a62536bdd3e096843">lastError</a> </dd></dl>
 
 <p>Переопределяется в <a class="el" href="class_residential_real_estate_object.html#a2682b729d892a5a1e865d8624c8d7c62">ResidentialRealEstateObject</a>.</p>
@@ -319,14 +334,14 @@ $(document).ready(function(){initNavTree('class_real_estate_object.html','');});
 
 </div>
 </div>
-<a class="anchor" id="ad6ea66e519df7adf84fd789b0c10e6a2"></a>
+<a class="anchor" id="a3404f0dac13cae08f7bcfc831d5be0e0"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void RealEstateObject::deletePhoto </td>
           <td>(</td>
-          <td class="paramtype">const uint&#160;</td>
+          <td class="paramtype">const uint &amp;&#160;</td>
           <td class="paramname"><em>photoNum</em></td><td>)</td>
           <td></td>
         </tr>
@@ -389,7 +404,7 @@ $(document).ready(function(){initNavTree('class_real_estate_object.html','');});
 
 </div>
 </div>
-<a class="anchor" id="ad7df07c0ab5f9366e3d064f96e01b3ad"></a>
+<a class="anchor" id="af3c92e5ea54a8c5d72d301c8fc0c24b6"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -399,7 +414,7 @@ $(document).ready(function(){initNavTree('class_real_estate_object.html','');});
         <tr>
           <td class="memname">bool RealEstateObject::operator&lt; </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_real_estate_object.html">RealEstateObject</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_real_estate_object.html">RealEstateObject</a> *const&#160;</td>
           <td class="paramname"><em>other</em></td><td>)</td>
           <td></td>
         </tr>
@@ -426,7 +441,7 @@ $(document).ready(function(){initNavTree('class_real_estate_object.html','');});
 
 </div>
 </div>
-<a class="anchor" id="a74372d4df1326d4a757b42f3bcfc0d1c"></a>
+<a class="anchor" id="ad7dab5d556a4e05834d05c61183db1dc"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -436,7 +451,7 @@ $(document).ready(function(){initNavTree('class_real_estate_object.html','');});
         <tr>
           <td class="memname">bool RealEstateObject::operator&gt; </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_real_estate_object.html">RealEstateObject</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_real_estate_object.html">RealEstateObject</a> *const&#160;</td>
           <td class="paramname"><em>other</em></td><td>)</td>
           <td></td>
         </tr>
@@ -463,14 +478,14 @@ $(document).ready(function(){initNavTree('class_real_estate_object.html','');});
 
 </div>
 </div>
-<a class="anchor" id="a1d79de474552b6e34293dee2937a2c99"></a>
+<a class="anchor" id="a86bd1a7786fa2996c0e7e700c9a7e487"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">QImage RealEstateObject::photo </td>
           <td>(</td>
-          <td class="paramtype">const uint&#160;</td>
+          <td class="paramtype">const uint &amp;&#160;</td>
           <td class="paramname"><em>photoNum</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -534,14 +549,14 @@ $(document).ready(function(){initNavTree('class_real_estate_object.html','');});
 
 </div>
 </div>
-<a class="anchor" id="aab8a8480eab99a93b963efaee63d97f8"></a>
+<a class="anchor" id="ac0a94064c687402126a1f2105cc76ea0"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">float RealEstateObject::roomSquare </td>
           <td>(</td>
-          <td class="paramtype">const uint&#160;</td>
+          <td class="paramtype">const uint &amp;&#160;</td>
           <td class="paramname"><em>roomNum</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -557,14 +572,14 @@ $(document).ready(function(){initNavTree('class_real_estate_object.html','');});
 
 </div>
 </div>
-<a class="anchor" id="accdd99c9b067516a0100ce7fe6fd0c55"></a>
+<a class="anchor" id="a9c926793ad740dbf02c382a1b98efd2e"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void RealEstateObject::setAdditionalInfo </td>
           <td>(</td>
-          <td class="paramtype">const QString&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>value</em></td><td>)</td>
           <td></td>
         </tr>
@@ -579,14 +594,14 @@ $(document).ready(function(){initNavTree('class_real_estate_object.html','');});
 
 </div>
 </div>
-<a class="anchor" id="abcdc05ad6a8adbdd7bb016c7ddad333e"></a>
+<a class="anchor" id="a3d2c0d03a145e7d0151831f29943cba3"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void RealEstateObject::setAddress </td>
           <td>(</td>
-          <td class="paramtype">const QString&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>value</em></td><td>)</td>
           <td></td>
         </tr>
@@ -601,14 +616,14 @@ $(document).ready(function(){initNavTree('class_real_estate_object.html','');});
 
 </div>
 </div>
-<a class="anchor" id="aceda88a360370c6de780d5f8534b8f83"></a>
+<a class="anchor" id="a815b67179f60c80c71edbdaa12ae7485"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void RealEstateObject::setCity </td>
           <td>(</td>
-          <td class="paramtype">const QString&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>value</em></td><td>)</td>
           <td></td>
         </tr>
@@ -623,14 +638,14 @@ $(document).ready(function(){initNavTree('class_real_estate_object.html','');});
 
 </div>
 </div>
-<a class="anchor" id="a6fa0b488ecf39518dca4e8602423ab1e"></a>
+<a class="anchor" id="a0497815895503639fe044a36a2d8e848"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void RealEstateObject::setContactInfo </td>
           <td>(</td>
-          <td class="paramtype">const QString&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>value</em></td><td>)</td>
           <td></td>
         </tr>
@@ -645,14 +660,14 @@ $(document).ready(function(){initNavTree('class_real_estate_object.html','');});
 
 </div>
 </div>
-<a class="anchor" id="a53ab5353e84de8cf3e996427f28ca96d"></a>
+<a class="anchor" id="ac4d79d28e51c60bc5e4eff7f94a70622"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void RealEstateObject::setFirstFloor </td>
           <td>(</td>
-          <td class="paramtype">const uint&#160;</td>
+          <td class="paramtype">const uint &amp;&#160;</td>
           <td class="paramname"><em>value</em></td><td>)</td>
           <td></td>
         </tr>
@@ -667,14 +682,14 @@ $(document).ready(function(){initNavTree('class_real_estate_object.html','');});
 
 </div>
 </div>
-<a class="anchor" id="af9a202f614a0da2fddc09b4efe2ac7d2"></a>
+<a class="anchor" id="a57410b976fe637ce9d10c11e4d3b6483"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void RealEstateObject::setFloorCount </td>
           <td>(</td>
-          <td class="paramtype">const uint&#160;</td>
+          <td class="paramtype">const uint &amp;&#160;</td>
           <td class="paramname"><em>value</em></td><td>)</td>
           <td></td>
         </tr>
@@ -689,14 +704,44 @@ $(document).ready(function(){initNavTree('class_real_estate_object.html','');});
 
 </div>
 </div>
-<a class="anchor" id="a5454e70f3501eb7c50728bbb55bfaed1"></a>
+<a class="anchor" id="aba7ddf02b96a27738b5a71b8ee5c2824"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RealEstateObject::setLastError </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Смена информации о последней возникшей ошибке </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>Новая информация о последней возникшей ошибке </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a1329d183e86b9e09fec3efc610bec741"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void RealEstateObject::setRealEstateType </td>
           <td>(</td>
-          <td class="paramtype">const RealEstateType&#160;</td>
+          <td class="paramtype">const RealEstateType &amp;&#160;</td>
           <td class="paramname"><em>value</em></td><td>)</td>
           <td></td>
         </tr>
@@ -711,14 +756,14 @@ $(document).ready(function(){initNavTree('class_real_estate_object.html','');});
 
 </div>
 </div>
-<a class="anchor" id="a81ef3e33455547a54f700993157b9c74"></a>
+<a class="anchor" id="ad7703f20cced8571da0c4c22bbc41373"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void RealEstateObject::setRoomCount </td>
           <td>(</td>
-          <td class="paramtype">const uint&#160;</td>
+          <td class="paramtype">const uint &amp;&#160;</td>
           <td class="paramname"><em>value</em></td><td>)</td>
           <td></td>
         </tr>
@@ -733,20 +778,20 @@ $(document).ready(function(){initNavTree('class_real_estate_object.html','');});
 
 </div>
 </div>
-<a class="anchor" id="ac1c0f3580365a147b76e122f0deb7115"></a>
+<a class="anchor" id="a808be85b68f22e703bf9e44103b91b01"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void RealEstateObject::setRoomSquare </td>
           <td>(</td>
-          <td class="paramtype">const uint&#160;</td>
+          <td class="paramtype">const uint &amp;&#160;</td>
           <td class="paramname"><em>roomNum</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">const float &amp;&#160;</td>
           <td class="paramname"><em>value</em>&#160;</td>
         </tr>
         <tr>
@@ -766,14 +811,14 @@ $(document).ready(function(){initNavTree('class_real_estate_object.html','');});
 
 </div>
 </div>
-<a class="anchor" id="af5c7f053a1bd8225eacd632ebc712a68"></a>
+<a class="anchor" id="a3ac3141ae3b933c439de94512c136519"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void RealEstateObject::setTotalSquare </td>
           <td>(</td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">const float &amp;&#160;</td>
           <td class="paramname"><em>value</em></td><td>)</td>
           <td></td>
         </tr>

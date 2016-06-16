@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS er_object_photos (
 CREATE TABLE IF NOT EXISTS er_query_types (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         name VARCHAR(25) NOT NULL
-);
+);z
 INSERT INTO er_query_types(name) VALUES("Продажа");
 INSERT INTO er_query_types(name) VALUES("Покупка");
 INSERT INTO er_query_types(name) VALUES("Продажа (аренда)");

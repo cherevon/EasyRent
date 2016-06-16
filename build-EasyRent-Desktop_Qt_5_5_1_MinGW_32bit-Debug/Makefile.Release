@@ -49,46 +49,49 @@ SOURCES       = ..\src\main.cpp \
 		..\src\RealEstateObject.cpp \
 		..\src\ResidentialRealEstateObject.cpp \
 		..\src\RealEstateQuery.cpp \
-		..\src\DlgUserQueryEditor.cpp \
-		..\src\RealEstateQueryModel.cpp release\qrc_resources.cpp \
+		..\src\RealEstateQueryModel.cpp \
+		..\src\DlgRealEstateQueryEditor.cpp release\qrc_resources.cpp \
 		release\moc_MainWindow.cpp \
 		release\moc_FormUserQueries.cpp \
 		release\moc_RealEstateObject.cpp \
 		release\moc_ResidentialRealEstateObject.cpp \
 		release\moc_RealEstateQuery.cpp \
-		release\moc_DlgUserQueryEditor.cpp \
-		release\moc_RealEstateQueryModel.cpp
+		release\moc_RealEstateQueryModel.cpp \
+		release\moc_DlgRealEstateQueryEditor.cpp \
+		release\moc_RealEstateQueryStorage.cpp
 OBJECTS       = release/main.o \
 		release/MainWindow.o \
 		release/FormUserQueries.o \
 		release/RealEstateObject.o \
 		release/ResidentialRealEstateObject.o \
 		release/RealEstateQuery.o \
-		release/DlgUserQueryEditor.o \
 		release/RealEstateQueryModel.o \
+		release/DlgRealEstateQueryEditor.o \
 		release/qrc_resources.o \
 		release/moc_MainWindow.o \
 		release/moc_FormUserQueries.o \
 		release/moc_RealEstateObject.o \
 		release/moc_ResidentialRealEstateObject.o \
 		release/moc_RealEstateQuery.o \
-		release/moc_DlgUserQueryEditor.o \
-		release/moc_RealEstateQueryModel.o
+		release/moc_RealEstateQueryModel.o \
+		release/moc_DlgRealEstateQueryEditor.o \
+		release/moc_RealEstateQueryStorage.o
 
 DIST          =  ..\src\MainWindow.h \
 		..\src\FormUserQueries.h \
 		..\src\RealEstateObject.h \
 		..\src\ResidentialRealEstateObject.h \
 		..\src\RealEstateQuery.h \
-		..\src\DlgUserQueryEditor.h \
-		..\src\RealEstateQueryModel.h ..\src\main.cpp \
+		..\src\RealEstateQueryModel.h \
+		..\src\DlgRealEstateQueryEditor.h \
+		..\src\RealEstateQueryStorage.h ..\src\main.cpp \
 		..\src\MainWindow.cpp \
 		..\src\FormUserQueries.cpp \
 		..\src\RealEstateObject.cpp \
 		..\src\ResidentialRealEstateObject.cpp \
 		..\src\RealEstateQuery.cpp \
-		..\src\DlgUserQueryEditor.cpp \
-		..\src\RealEstateQueryModel.cpp
+		..\src\RealEstateQueryModel.cpp \
+		..\src\DlgRealEstateQueryEditor.cpp
 QMAKE_TARGET  = EasyRent
 DESTDIR        = release\ #avoid trailing-slash linebreak
 TARGET         = EasyRent.exe
@@ -115,7 +118,7 @@ DESTDIR_TARGET = release\EasyRent.exe
 first: all
 all: Makefile.Release  $(DESTDIR_TARGET)
 
-$(DESTDIR_TARGET): ui_MainWindow.h ui_FormUserQueries.h ui_DlgUserQueryEditor.h $(OBJECTS) 
+$(DESTDIR_TARGET): ui_MainWindow.h ui_FormUserQueries.h ui_DlgRealEstateQueryEditor.h $(OBJECTS) 
 	$(LINKER) $(LFLAGS) -o $(DESTDIR_TARGET) object_script.EasyRent.Release  $(LIBS)
 
 qmake: FORCE
@@ -127,7 +130,7 @@ dist:
 	$(ZIP) EasyRent.zip $(SOURCES) $(DIST) ..\src\EasyRent.pro ..\..\Software\Qt\5.5\mingw492_32\mkspecs\features\spec_pre.prf ..\..\Software\Qt\5.5\mingw492_32\mkspecs\qdevice.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\features\device_config.prf ..\..\Software\Qt\5.5\mingw492_32\mkspecs\qconfig.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_3dcollision.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_3dcollision_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_3dcore.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_3dcore_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_3dinput.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_3dinput_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_3dlogic.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_3dlogic_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_3dquick.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_3dquick_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_3dquickrenderer.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_3dquickrenderer_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_3drenderer.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_3drenderer_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_axbase.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_axbase_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_axcontainer.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_axcontainer_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_axserver.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_axserver_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_bluetooth.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_bluetooth_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_bootstrap_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_clucene_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_concurrent.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_concurrent_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_core.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_core_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_dbus.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_dbus_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_declarative.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_declarative_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_designer.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_designer_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_designercomponents_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_enginio.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_enginio_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_gui.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_gui_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_help.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_help_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_location.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_location_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_multimedia.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_multimedia_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_multimediawidgets.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_multimediawidgets_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_network.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_network_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_nfc.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_nfc_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_opengl.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_opengl_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_openglextensions.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_openglextensions_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_platformsupport_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_positioning.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_positioning_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_printsupport.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_printsupport_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_qml.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_qml_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_qmldevtools_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_qmltest.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_qmltest_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_quick.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_quick_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_quickparticles_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_quickwidgets.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_quickwidgets_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_script.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_script_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_scripttools.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_scripttools_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_sensors.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_sensors_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_serialport.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_serialport_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_sql.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_sql_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_svg.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_svg_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_testlib.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_testlib_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_uiplugin.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_uitools.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_uitools_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_webchannel.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_webchannel_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_webkit.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_webkit_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_webkitwidgets.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_webkitwidgets_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_websockets.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_websockets_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_widgets.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_widgets_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_winextras.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_winextras_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_xml.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_xml_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_xmlpatterns.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_xmlpatterns_private.pri ..\..\Software\Qt\5.5\mingw492_32\mkspecs\features\qt_functions.prf ..\..\Software\Qt\5.5\mingw492_32\mkspecs\features\qt_config.prf ..\..\Software\Qt\5.5\mingw492_32\mkspecs\features\win32\qt_config.prf ..\..\Software\Qt\5.5\mingw492_32\mkspecs\win32-g++\qmake.conf ..\..\Software\Qt\5.5\mingw492_32\mkspecs\features\spec_post.prf ..\..\Software\Qt\5.5\mingw492_32\mkspecs\features\exclusive_builds.prf ..\..\Software\Qt\5.5\mingw492_32\mkspecs\features\default_pre.prf ..\..\Software\Qt\5.5\mingw492_32\mkspecs\features\win32\default_pre.prf ..\..\Software\Qt\5.5\mingw492_32\mkspecs\features\resolve_config.prf ..\..\Software\Qt\5.5\mingw492_32\mkspecs\features\exclusive_builds_post.prf ..\..\Software\Qt\5.5\mingw492_32\mkspecs\features\default_post.prf ..\..\Software\Qt\5.5\mingw492_32\mkspecs\features\build_pass.prf ..\..\Software\Qt\5.5\mingw492_32\mkspecs\features\c++11.prf ..\..\Software\Qt\5.5\mingw492_32\mkspecs\features\qml_debug.prf ..\..\Software\Qt\5.5\mingw492_32\mkspecs\features\win32\rtti.prf ..\..\Software\Qt\5.5\mingw492_32\mkspecs\features\precompile_header.prf ..\..\Software\Qt\5.5\mingw492_32\mkspecs\features\warn_on.prf ..\..\Software\Qt\5.5\mingw492_32\mkspecs\features\qt.prf ..\..\Software\Qt\5.5\mingw492_32\mkspecs\features\resources.prf ..\..\Software\Qt\5.5\mingw492_32\mkspecs\features\moc.prf ..\..\Software\Qt\5.5\mingw492_32\mkspecs\features\win32\opengl.prf ..\..\Software\Qt\5.5\mingw492_32\mkspecs\features\uic.prf ..\..\Software\Qt\5.5\mingw492_32\mkspecs\features\win32\windows.prf ..\..\Software\Qt\5.5\mingw492_32\mkspecs\features\testcase_targets.prf ..\..\Software\Qt\5.5\mingw492_32\mkspecs\features\exceptions.prf ..\..\Software\Qt\5.5\mingw492_32\mkspecs\features\yacc.prf ..\..\Software\Qt\5.5\mingw492_32\mkspecs\features\lex.prf ..\src\EasyRent.pro ..\src\resources.qrc D:/Software/Qt/5.5/mingw492_32/lib/qtmain.prl D:/Software/Qt/5.5/mingw492_32/lib/Qt5Quick.prl D:/Software/Qt/5.5/mingw492_32/lib/Qt5Widgets.prl D:/Software/Qt/5.5/mingw492_32/lib/Qt5Gui.prl D:/Software/Qt/5.5/mingw492_32/lib/Qt5Qml.prl D:/Software/Qt/5.5/mingw492_32/lib/Qt5Network.prl D:/Software/Qt/5.5/mingw492_32/lib/Qt5Sql.prl D:/Software/Qt/5.5/mingw492_32/lib/Qt5Core.prl  NO_PCH_SOURCES RESOURCES HEADERS SOURCES OBJECTIVE_SOURCES FORMS YACCSOURCES YACCSOURCES LEXSOURCES 
 
 clean: compiler_clean 
-	-$(DEL_FILE) release\main.o release\MainWindow.o release\FormUserQueries.o release\RealEstateObject.o release\ResidentialRealEstateObject.o release\RealEstateQuery.o release\DlgUserQueryEditor.o release\RealEstateQueryModel.o release\qrc_resources.o release\moc_MainWindow.o release\moc_FormUserQueries.o release\moc_RealEstateObject.o release\moc_ResidentialRealEstateObject.o release\moc_RealEstateQuery.o release\moc_DlgUserQueryEditor.o release\moc_RealEstateQueryModel.o
+	-$(DEL_FILE) release\main.o release\MainWindow.o release\FormUserQueries.o release\RealEstateObject.o release\ResidentialRealEstateObject.o release\RealEstateQuery.o release\RealEstateQueryModel.o release\DlgRealEstateQueryEditor.o release\qrc_resources.o release\moc_MainWindow.o release\moc_FormUserQueries.o release\moc_RealEstateObject.o release\moc_ResidentialRealEstateObject.o release\moc_RealEstateQuery.o release\moc_RealEstateQueryModel.o release\moc_DlgRealEstateQueryEditor.o release\moc_RealEstateQueryStorage.o
 
 distclean: clean 
 	-$(DEL_FILE) $(DESTDIR_TARGET)
@@ -149,9 +152,9 @@ release/qrc_resources.cpp: ../src/resources.qrc \
 		../icons/previous.ico
 	D:\Software\Qt\5.5\mingw492_32\bin\rcc.exe -name resources ..\src\resources.qrc -o release\qrc_resources.cpp
 
-compiler_moc_header_make_all: release/moc_MainWindow.cpp release/moc_FormUserQueries.cpp release/moc_RealEstateObject.cpp release/moc_ResidentialRealEstateObject.cpp release/moc_RealEstateQuery.cpp release/moc_DlgUserQueryEditor.cpp release/moc_RealEstateQueryModel.cpp
+compiler_moc_header_make_all: release/moc_MainWindow.cpp release/moc_FormUserQueries.cpp release/moc_RealEstateObject.cpp release/moc_ResidentialRealEstateObject.cpp release/moc_RealEstateQuery.cpp release/moc_RealEstateQueryModel.cpp release/moc_DlgRealEstateQueryEditor.cpp release/moc_RealEstateQueryStorage.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) release\moc_MainWindow.cpp release\moc_FormUserQueries.cpp release\moc_RealEstateObject.cpp release\moc_ResidentialRealEstateObject.cpp release\moc_RealEstateQuery.cpp release\moc_DlgUserQueryEditor.cpp release\moc_RealEstateQueryModel.cpp
+	-$(DEL_FILE) release\moc_MainWindow.cpp release\moc_FormUserQueries.cpp release\moc_RealEstateObject.cpp release\moc_ResidentialRealEstateObject.cpp release\moc_RealEstateQuery.cpp release\moc_RealEstateQueryModel.cpp release\moc_DlgRealEstateQueryEditor.cpp release\moc_RealEstateQueryStorage.cpp
 release/moc_MainWindow.cpp: ../../Software/Qt/5.5/mingw492_32/include/QtWidgets/QMainWindow \
 		../../Software/Qt/5.5/mingw492_32/include/QtWidgets/qmainwindow.h \
 		../../Software/Qt/5.5/mingw492_32/include/QtWidgets/qwidget.h \
@@ -659,121 +662,6 @@ release/moc_RealEstateQuery.cpp: ../../Software/Qt/5.5/mingw492_32/include/QtCor
 		../src/RealEstateQuery.h
 	D:\Software\Qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -ID:/Software/Qt/5.5/mingw492_32/mkspecs/win32-g++ -ID:/EasyRent/src -ID:/Software/Qt/5.5/mingw492_32/include -ID:/Software/Qt/5.5/mingw492_32/include/QtQuick -ID:/Software/Qt/5.5/mingw492_32/include/QtWidgets -ID:/Software/Qt/5.5/mingw492_32/include/QtGui -ID:/Software/Qt/5.5/mingw492_32/include/QtANGLE -ID:/Software/Qt/5.5/mingw492_32/include/QtQml -ID:/Software/Qt/5.5/mingw492_32/include/QtNetwork -ID:/Software/Qt/5.5/mingw492_32/include/QtSql -ID:/Software/Qt/5.5/mingw492_32/include/QtCore -I. ..\src\RealEstateQuery.h -o release\moc_RealEstateQuery.cpp
 
-release/moc_DlgUserQueryEditor.cpp: ../../Software/Qt/5.5/mingw492_32/include/QtWidgets/QWidget \
-		../../Software/Qt/5.5/mingw492_32/include/QtWidgets/qwidget.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtGui/qwindowdefs.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qglobal.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qconfig.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qfeatures.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qsystemdetection.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qprocessordetection.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qcompilerdetection.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qtypeinfo.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qtypetraits.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qsysinfo.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qlogging.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qflags.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qbasicatomic.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_bootstrap.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qgenericatomic.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_cxx11.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_gcc.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_msvc.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv7.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv6.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv5.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_ia64.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_mips.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_x86.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_unix.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qglobalstatic.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qmutex.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qnumeric.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qobjectdefs.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qnamespace.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qobjectdefs_impl.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtGui/qwindowdefs_win.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qobject.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qstring.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qchar.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qbytearray.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qrefcount.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qarraydata.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qstringbuilder.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qlist.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qalgorithms.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qiterator.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qbytearraylist.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qstringlist.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qregexp.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qstringmatcher.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qcoreevent.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qscopedpointer.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qmetatype.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qvarlengtharray.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qcontainerfwd.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qisenum.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qobject_impl.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qmargins.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtGui/qpaintdevice.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qrect.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qsize.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qpoint.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtGui/qpalette.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtGui/qcolor.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtGui/qrgb.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtGui/qbrush.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qpair.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qvector.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtGui/qmatrix.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtGui/qpolygon.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtGui/qregion.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qdatastream.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qiodevice.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qline.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtGui/qtransform.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtGui/qpainterpath.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtGui/qimage.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtGui/qpixelformat.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtGui/qpixmap.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qsharedpointer.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qshareddata.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qhash.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qsharedpointer_impl.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtGui/qfont.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtGui/qfontmetrics.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtGui/qfontinfo.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtWidgets/qsizepolicy.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtGui/qcursor.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtGui/qkeysequence.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtGui/qevent.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qvariant.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qmap.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qdebug.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qtextstream.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qlocale.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qset.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qcontiguouscache.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qurl.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qurlquery.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qfile.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qfiledevice.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtGui/qvector2d.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtGui/qtouchdevice.h \
-		../src/RealEstateQuery.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/QObject \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/QMap \
-		../src/RealEstateObject.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/QVector \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/QDateTime \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qdatetime.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/QString \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/QList \
-		../../Software/Qt/5.5/mingw492_32/include/QtGui/QImage \
-		../src/DlgUserQueryEditor.h
-	D:\Software\Qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -ID:/Software/Qt/5.5/mingw492_32/mkspecs/win32-g++ -ID:/EasyRent/src -ID:/Software/Qt/5.5/mingw492_32/include -ID:/Software/Qt/5.5/mingw492_32/include/QtQuick -ID:/Software/Qt/5.5/mingw492_32/include/QtWidgets -ID:/Software/Qt/5.5/mingw492_32/include/QtGui -ID:/Software/Qt/5.5/mingw492_32/include/QtANGLE -ID:/Software/Qt/5.5/mingw492_32/include/QtQml -ID:/Software/Qt/5.5/mingw492_32/include/QtNetwork -ID:/Software/Qt/5.5/mingw492_32/include/QtSql -ID:/Software/Qt/5.5/mingw492_32/include/QtCore -I. ..\src\DlgUserQueryEditor.h -o release\moc_DlgUserQueryEditor.cpp
-
 release/moc_RealEstateQueryModel.cpp: ../../Software/Qt/5.5/mingw492_32/include/QtCore/QAbstractTableModel \
 		../../Software/Qt/5.5/mingw492_32/include/QtCore/qabstractitemmodel.h \
 		../../Software/Qt/5.5/mingw492_32/include/QtCore/qvariant.h \
@@ -870,17 +758,7 @@ release/moc_RealEstateQueryModel.cpp: ../../Software/Qt/5.5/mingw492_32/include/
 		../src/RealEstateQueryModel.h
 	D:\Software\Qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -ID:/Software/Qt/5.5/mingw492_32/mkspecs/win32-g++ -ID:/EasyRent/src -ID:/Software/Qt/5.5/mingw492_32/include -ID:/Software/Qt/5.5/mingw492_32/include/QtQuick -ID:/Software/Qt/5.5/mingw492_32/include/QtWidgets -ID:/Software/Qt/5.5/mingw492_32/include/QtGui -ID:/Software/Qt/5.5/mingw492_32/include/QtANGLE -ID:/Software/Qt/5.5/mingw492_32/include/QtQml -ID:/Software/Qt/5.5/mingw492_32/include/QtNetwork -ID:/Software/Qt/5.5/mingw492_32/include/QtSql -ID:/Software/Qt/5.5/mingw492_32/include/QtCore -I. ..\src\RealEstateQueryModel.h -o release\moc_RealEstateQueryModel.cpp
 
-compiler_moc_source_make_all:
-compiler_moc_source_clean:
-compiler_uic_make_all: ui_MainWindow.h ui_FormUserQueries.h ui_DlgUserQueryEditor.h
-compiler_uic_clean:
-	-$(DEL_FILE) ui_MainWindow.h ui_FormUserQueries.h ui_DlgUserQueryEditor.h
-ui_MainWindow.h: ../src/MainWindow.ui
-	D:\Software\Qt\5.5\mingw492_32\bin\uic.exe ..\src\MainWindow.ui -o ui_MainWindow.h
-
-ui_FormUserQueries.h: ../src/FormUserQueries.ui \
-		../src/DlgUserQueryEditor.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtWidgets/QWidget \
+release/moc_DlgRealEstateQueryEditor.cpp: ../../Software/Qt/5.5/mingw492_32/include/QtWidgets/QWidget \
 		../../Software/Qt/5.5/mingw492_32/include/QtWidgets/qwidget.h \
 		../../Software/Qt/5.5/mingw492_32/include/QtGui/qwindowdefs.h \
 		../../Software/Qt/5.5/mingw492_32/include/QtCore/qglobal.h \
@@ -991,11 +869,117 @@ ui_FormUserQueries.h: ../src/FormUserQueries.ui \
 		../../Software/Qt/5.5/mingw492_32/include/QtCore/qdatetime.h \
 		../../Software/Qt/5.5/mingw492_32/include/QtCore/QString \
 		../../Software/Qt/5.5/mingw492_32/include/QtCore/QList \
-		../../Software/Qt/5.5/mingw492_32/include/QtGui/QImage
+		../../Software/Qt/5.5/mingw492_32/include/QtGui/QImage \
+		../src/DlgRealEstateQueryEditor.h
+	D:\Software\Qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -ID:/Software/Qt/5.5/mingw492_32/mkspecs/win32-g++ -ID:/EasyRent/src -ID:/Software/Qt/5.5/mingw492_32/include -ID:/Software/Qt/5.5/mingw492_32/include/QtQuick -ID:/Software/Qt/5.5/mingw492_32/include/QtWidgets -ID:/Software/Qt/5.5/mingw492_32/include/QtGui -ID:/Software/Qt/5.5/mingw492_32/include/QtANGLE -ID:/Software/Qt/5.5/mingw492_32/include/QtQml -ID:/Software/Qt/5.5/mingw492_32/include/QtNetwork -ID:/Software/Qt/5.5/mingw492_32/include/QtSql -ID:/Software/Qt/5.5/mingw492_32/include/QtCore -I. ..\src\DlgRealEstateQueryEditor.h -o release\moc_DlgRealEstateQueryEditor.cpp
+
+release/moc_RealEstateQueryStorage.cpp: ../../Software/Qt/5.5/mingw492_32/include/QtCore/QObject \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qobject.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qobjectdefs.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qnamespace.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qglobal.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qconfig.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qfeatures.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qsystemdetection.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qprocessordetection.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qcompilerdetection.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qtypeinfo.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qtypetraits.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qsysinfo.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qlogging.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qflags.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qbasicatomic.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_bootstrap.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qgenericatomic.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_cxx11.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_gcc.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_msvc.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv7.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv6.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv5.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_ia64.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_mips.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_x86.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_unix.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qglobalstatic.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qmutex.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qnumeric.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qobjectdefs_impl.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qstring.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qchar.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qbytearray.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qrefcount.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qarraydata.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qstringbuilder.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qlist.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qalgorithms.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qiterator.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qbytearraylist.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qstringlist.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qregexp.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qstringmatcher.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qcoreevent.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qscopedpointer.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qmetatype.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qvarlengtharray.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qcontainerfwd.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qisenum.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qobject_impl.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/QList \
+		../src/RealEstateQuery.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/QMap \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qmap.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qpair.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qdebug.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qhash.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qtextstream.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qiodevice.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qlocale.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qvariant.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qshareddata.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qvector.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qpoint.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qset.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qcontiguouscache.h \
+		../src/RealEstateObject.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/QVector \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/QDateTime \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qdatetime.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/QString \
+		../../Software/Qt/5.5/mingw492_32/include/QtGui/QImage \
+		../../Software/Qt/5.5/mingw492_32/include/QtGui/qimage.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtGui/qtransform.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtGui/qmatrix.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtGui/qpolygon.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qrect.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qmargins.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qsize.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtGui/qregion.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtGui/qwindowdefs.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtGui/qwindowdefs_win.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qdatastream.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qline.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtGui/qpainterpath.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtGui/qpaintdevice.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtGui/qrgb.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtGui/qpixelformat.h \
+		../src/RealEstateQueryStorage.h
+	D:\Software\Qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -ID:/Software/Qt/5.5/mingw492_32/mkspecs/win32-g++ -ID:/EasyRent/src -ID:/Software/Qt/5.5/mingw492_32/include -ID:/Software/Qt/5.5/mingw492_32/include/QtQuick -ID:/Software/Qt/5.5/mingw492_32/include/QtWidgets -ID:/Software/Qt/5.5/mingw492_32/include/QtGui -ID:/Software/Qt/5.5/mingw492_32/include/QtANGLE -ID:/Software/Qt/5.5/mingw492_32/include/QtQml -ID:/Software/Qt/5.5/mingw492_32/include/QtNetwork -ID:/Software/Qt/5.5/mingw492_32/include/QtSql -ID:/Software/Qt/5.5/mingw492_32/include/QtCore -I. ..\src\RealEstateQueryStorage.h -o release\moc_RealEstateQueryStorage.cpp
+
+compiler_moc_source_make_all:
+compiler_moc_source_clean:
+compiler_uic_make_all: ui_MainWindow.h ui_FormUserQueries.h ui_DlgRealEstateQueryEditor.h
+compiler_uic_clean:
+	-$(DEL_FILE) ui_MainWindow.h ui_FormUserQueries.h ui_DlgRealEstateQueryEditor.h
+ui_MainWindow.h: ../src/MainWindow.ui
+	D:\Software\Qt\5.5\mingw492_32\bin\uic.exe ..\src\MainWindow.ui -o ui_MainWindow.h
+
+ui_FormUserQueries.h: ../src/FormUserQueries.ui
 	D:\Software\Qt\5.5\mingw492_32\bin\uic.exe ..\src\FormUserQueries.ui -o ui_FormUserQueries.h
 
-ui_DlgUserQueryEditor.h: ../src/DlgUserQueryEditor.ui
-	D:\Software\Qt\5.5\mingw492_32\bin\uic.exe ..\src\DlgUserQueryEditor.ui -o ui_DlgUserQueryEditor.h
+ui_DlgRealEstateQueryEditor.h: ../src/DlgRealEstateQueryEditor.ui
+	D:\Software\Qt\5.5\mingw492_32\bin\uic.exe ..\src\DlgRealEstateQueryEditor.ui -o ui_DlgRealEstateQueryEditor.h
 
 compiler_yacc_decl_make_all:
 compiler_yacc_decl_clean:
@@ -1117,7 +1101,7 @@ release/main.o: ../src/main.cpp ../../Software/Qt/5.5/mingw492_32/include/QtWidg
 		../../Software/Qt/5.5/mingw492_32/include/QtGui/qtouchdevice.h \
 		../../Software/Qt/5.5/mingw492_32/include/QtGui/qguiapplication.h \
 		../../Software/Qt/5.5/mingw492_32/include/QtGui/qinputmethod.h \
-		../src/DlgUserQueryEditor.h \
+		../src/DlgRealEstateQueryEditor.h \
 		../../Software/Qt/5.5/mingw492_32/include/QtWidgets/QWidget \
 		../src/RealEstateQuery.h \
 		../../Software/Qt/5.5/mingw492_32/include/QtCore/QObject \
@@ -1430,6 +1414,8 @@ release/FormUserQueries.o: ../src/FormUserQueries.cpp ../src/FormUserQueries.h \
 		../../Software/Qt/5.5/mingw492_32/include/QtGui/qinputmethod.h \
 		../../Software/Qt/5.5/mingw492_32/include/QtWidgets/QButtonGroup \
 		../../Software/Qt/5.5/mingw492_32/include/QtWidgets/qbuttongroup.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtWidgets/QFrame \
+		../../Software/Qt/5.5/mingw492_32/include/QtWidgets/qframe.h \
 		../../Software/Qt/5.5/mingw492_32/include/QtWidgets/QHBoxLayout \
 		../../Software/Qt/5.5/mingw492_32/include/QtWidgets/qboxlayout.h \
 		../../Software/Qt/5.5/mingw492_32/include/QtWidgets/qlayout.h \
@@ -1439,7 +1425,6 @@ release/FormUserQueries.o: ../src/FormUserQueries.cpp ../src/FormUserQueries.h \
 		../../Software/Qt/5.5/mingw492_32/include/QtWidgets/qheaderview.h \
 		../../Software/Qt/5.5/mingw492_32/include/QtWidgets/qabstractitemview.h \
 		../../Software/Qt/5.5/mingw492_32/include/QtWidgets/qabstractscrollarea.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtWidgets/qframe.h \
 		../../Software/Qt/5.5/mingw492_32/include/QtCore/qitemselectionmodel.h \
 		../../Software/Qt/5.5/mingw492_32/include/QtWidgets/qabstractitemdelegate.h \
 		../../Software/Qt/5.5/mingw492_32/include/QtWidgets/qstyleoption.h \
@@ -1454,7 +1439,7 @@ release/FormUserQueries.o: ../src/FormUserQueries.cpp ../src/FormUserQueries.h \
 		../../Software/Qt/5.5/mingw492_32/include/QtWidgets/qrubberband.h \
 		../../Software/Qt/5.5/mingw492_32/include/QtWidgets/QTableView \
 		../../Software/Qt/5.5/mingw492_32/include/QtWidgets/qtableview.h \
-		../src/DlgUserQueryEditor.h \
+		../src/DlgRealEstateQueryEditor.h \
 		../../Software/Qt/5.5/mingw492_32/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\FormUserQueries.o ..\src\FormUserQueries.cpp
 
@@ -1734,7 +1719,103 @@ release/RealEstateQuery.o: ../src/RealEstateQuery.cpp ../src/RealEstateQuery.h \
 		../../Software/Qt/5.5/mingw492_32/include/QtGui/qpixelformat.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\RealEstateQuery.o ..\src\RealEstateQuery.cpp
 
-release/DlgUserQueryEditor.o: ../src/DlgUserQueryEditor.cpp ../src/DlgUserQueryEditor.h \
+release/RealEstateQueryModel.o: ../src/RealEstateQueryModel.cpp ../src/RealEstateQueryModel.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/QAbstractTableModel \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qabstractitemmodel.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qvariant.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qglobal.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qconfig.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qfeatures.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qsystemdetection.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qprocessordetection.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qcompilerdetection.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qtypeinfo.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qtypetraits.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qsysinfo.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qlogging.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qflags.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qglobalstatic.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qmutex.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qnumeric.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qbasicatomic.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_bootstrap.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qgenericatomic.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_cxx11.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_gcc.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_msvc.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv7.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv6.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv5.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_ia64.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_mips.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_x86.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_unix.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qbytearray.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qrefcount.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qnamespace.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qarraydata.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qstring.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qchar.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qstringbuilder.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qlist.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qalgorithms.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qiterator.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qbytearraylist.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qstringlist.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qregexp.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qstringmatcher.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qmetatype.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qvarlengtharray.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qcontainerfwd.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qisenum.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qobjectdefs.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qobjectdefs_impl.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qmap.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qpair.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qdebug.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qhash.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qtextstream.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qiodevice.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qobject.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qcoreevent.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qscopedpointer.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qobject_impl.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qlocale.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qshareddata.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qvector.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qpoint.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qset.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qcontiguouscache.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/QList \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/QVector \
+		../src/RealEstateQuery.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/QObject \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/QMap \
+		../src/RealEstateObject.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/QDateTime \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qdatetime.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/QString \
+		../../Software/Qt/5.5/mingw492_32/include/QtGui/QImage \
+		../../Software/Qt/5.5/mingw492_32/include/QtGui/qimage.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtGui/qtransform.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtGui/qmatrix.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtGui/qpolygon.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qrect.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qmargins.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qsize.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtGui/qregion.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtGui/qwindowdefs.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtGui/qwindowdefs_win.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qdatastream.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtCore/qline.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtGui/qpainterpath.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtGui/qpaintdevice.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtGui/qrgb.h \
+		../../Software/Qt/5.5/mingw492_32/include/QtGui/qpixelformat.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\RealEstateQueryModel.o ..\src\RealEstateQueryModel.cpp
+
+release/DlgRealEstateQueryEditor.o: ../src/DlgRealEstateQueryEditor.cpp ../src/DlgRealEstateQueryEditor.h \
 		../../Software/Qt/5.5/mingw492_32/include/QtWidgets/QWidget \
 		../../Software/Qt/5.5/mingw492_32/include/QtWidgets/qwidget.h \
 		../../Software/Qt/5.5/mingw492_32/include/QtGui/qwindowdefs.h \
@@ -1919,103 +2000,7 @@ release/DlgUserQueryEditor.o: ../src/DlgUserQueryEditor.cpp ../src/DlgUserQueryE
 		../../Software/Qt/5.5/mingw492_32/include/QtCore/QStringListModel \
 		../../Software/Qt/5.5/mingw492_32/include/QtCore/qstringlistmodel.h \
 		../src/ResidentialRealEstateObject.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\DlgUserQueryEditor.o ..\src\DlgUserQueryEditor.cpp
-
-release/RealEstateQueryModel.o: ../src/RealEstateQueryModel.cpp ../src/RealEstateQueryModel.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/QAbstractTableModel \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qabstractitemmodel.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qvariant.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qglobal.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qconfig.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qfeatures.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qsystemdetection.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qprocessordetection.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qcompilerdetection.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qtypeinfo.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qtypetraits.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qsysinfo.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qlogging.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qflags.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qglobalstatic.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qmutex.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qnumeric.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qbasicatomic.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_bootstrap.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qgenericatomic.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_cxx11.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_gcc.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_msvc.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv7.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv6.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv5.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_ia64.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_mips.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_x86.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qatomic_unix.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qbytearray.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qrefcount.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qnamespace.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qarraydata.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qstring.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qchar.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qstringbuilder.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qlist.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qalgorithms.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qiterator.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qbytearraylist.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qstringlist.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qregexp.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qstringmatcher.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qmetatype.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qvarlengtharray.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qcontainerfwd.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qisenum.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qobjectdefs.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qobjectdefs_impl.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qmap.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qpair.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qdebug.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qhash.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qtextstream.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qiodevice.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qobject.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qcoreevent.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qscopedpointer.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qobject_impl.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qlocale.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qshareddata.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qvector.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qpoint.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qset.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qcontiguouscache.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/QList \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/QVector \
-		../src/RealEstateQuery.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/QObject \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/QMap \
-		../src/RealEstateObject.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/QDateTime \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qdatetime.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/QString \
-		../../Software/Qt/5.5/mingw492_32/include/QtGui/QImage \
-		../../Software/Qt/5.5/mingw492_32/include/QtGui/qimage.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtGui/qtransform.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtGui/qmatrix.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtGui/qpolygon.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qrect.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qmargins.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qsize.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtGui/qregion.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtGui/qwindowdefs.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtGui/qwindowdefs_win.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qdatastream.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtCore/qline.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtGui/qpainterpath.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtGui/qpaintdevice.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtGui/qrgb.h \
-		../../Software/Qt/5.5/mingw492_32/include/QtGui/qpixelformat.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\RealEstateQueryModel.o ..\src\RealEstateQueryModel.cpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\DlgRealEstateQueryEditor.o ..\src\DlgRealEstateQueryEditor.cpp
 
 release/qrc_resources.o: release/qrc_resources.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\qrc_resources.o release\qrc_resources.cpp
@@ -2035,11 +2020,14 @@ release/moc_ResidentialRealEstateObject.o: release/moc_ResidentialRealEstateObje
 release/moc_RealEstateQuery.o: release/moc_RealEstateQuery.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\moc_RealEstateQuery.o release\moc_RealEstateQuery.cpp
 
-release/moc_DlgUserQueryEditor.o: release/moc_DlgUserQueryEditor.cpp 
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\moc_DlgUserQueryEditor.o release\moc_DlgUserQueryEditor.cpp
-
 release/moc_RealEstateQueryModel.o: release/moc_RealEstateQueryModel.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\moc_RealEstateQueryModel.o release\moc_RealEstateQueryModel.cpp
+
+release/moc_DlgRealEstateQueryEditor.o: release/moc_DlgRealEstateQueryEditor.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\moc_DlgRealEstateQueryEditor.o release\moc_DlgRealEstateQueryEditor.cpp
+
+release/moc_RealEstateQueryStorage.o: release/moc_RealEstateQueryStorage.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\moc_RealEstateQueryStorage.o release\moc_RealEstateQueryStorage.cpp
 
 ####### Install
 
