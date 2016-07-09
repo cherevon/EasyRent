@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['mainwindow',['MainWindow',['../class_main_window.html',1,'']]],
-  ['matches',['matches',['../class_real_estate_query.html#ab1197c1e600b089f98f22fbda51e6101',1,'RealEstateQuery']]]
+  ['kitchencount',['kitchenCount',['../class_residential_real_estate_object.html#acfabedbc3445cd4da36441076bf41207',1,'ResidentialRealEstateObject']]],
+  ['kitchensquare',['kitchenSquare',['../class_residential_real_estate_object.html#a66d34fbf6563ce2875a4649582def36b',1,'ResidentialRealEstateObject']]]
 ];

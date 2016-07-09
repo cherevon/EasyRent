@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['id',['ID',['../class_real_estate_query.html#a5d395b0a118afa497bb3c98391d9c3b3',1,'RealEstateQuery']]]
+  ['firstfloor',['firstFloor',['../class_real_estate_object.html#af6bad4a5d9ddd6d4471372307f49c00b',1,'RealEstateObject']]],
+  ['floorcount',['floorCount',['../class_real_estate_object.html#a4c4122100208339018d16dad1540d7e1',1,'RealEstateObject']]],
+  ['formuserqueries',['FormUserQueries',['../class_form_user_queries.html',1,'']]]
 ];

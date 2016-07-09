@@ -1,40 +1,19 @@
 #include "MainWindow.h"
-#include "ui_MainWindow.h"
+#include "ProgressButton.h"
 
-MainWindow::MainWindow(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::MainWindow)
-{
-    ui->setupUi(this);
-    addUserTask(ui->actMyQueries);
-}
 
-MainWindow::~MainWindow()
+MainWindow::MainWindow(QWidget *parent): QWidget(parent), UserInterface()
 {
-    delete ui;
-}
+    // определяем основной компоновщик элементов формы
+    fLayoutMain = new QHBoxLayout();
+    setLayout(fLayoutMain);
 
-void MainWindow::changeEvent(QEvent *e)
-{
-    QMainWindow::changeEvent(e);
-    switch (e->type()) {
-    case QEvent::LanguageChange:
-        ui->retranslateUi(this);
-        break;
-    default:
-        break;
-    }
-}
+    // располагаем область для отображения доступных пользователю задач
+    fLayoutTasks = new QVBoxLayout();
+    fLayoutTasks->addStretch(1);
+    fLayoutMain->addLayout(fLayoutTasks);
 
-void MainWindow::addUserTask(QAction* newTask)
-{
-    if (newTask != NULL)
-    {
-        QToolButton* taskButton = new QToolButton(this);
-        taskButton->setIcon(newTask->icon());
-        taskButton->setText(newTask->text());
-//        taskButton->addAction(newTask);
-        connect(taskButton, SIGNAL(clicked()), newTask, SLOT(trigger()));
-//        ui->layoutTasks->addWidget(taskButton);
-    }
+    // располагаем область для отображения виджетов активной задачи
+    fLayoutWidgets = new QStackedLayout();
+    fLayoutMain->addLayout(fLayoutWidgets, 1);
 }

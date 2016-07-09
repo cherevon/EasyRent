@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['dlgrealestatequeryeditor',['DlgRealEstateQueryEditor',['../class_dlg_real_estate_query_editor.html',1,'']]]
+  ['applicationcore',['ApplicationCore',['../class_application_core.html',1,'']]]
 ];

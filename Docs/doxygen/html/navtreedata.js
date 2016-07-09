@@ -7,7 +7,8 @@ var NAVTREE =
       [ "Иерархия классов", "hierarchy.html", "hierarchy" ],
       [ "Члены классов", "functions.html", [
         [ "Указатель", "functions.html", null ],
-        [ "Функции", "functions_func.html", null ]
+        [ "Функции", "functions_func.html", null ],
+        [ "Переменные", "functions_vars.html", null ]
       ] ]
     ] ],
     [ "Файлы", null, [
@@ -18,7 +19,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_dlg_real_estate_query_editor_8h_source.html"
+"_application_core_8h_source.html"
 ];
 
 var SYNCONMSG = 'нажмите на выключить для синхронизации панелей';

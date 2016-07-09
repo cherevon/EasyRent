@@ -4,5 +4,6 @@ var class_form_user_queries =
     [ "~FormUserQueries", "class_form_user_queries.html#a871c55a27ee02282790d91cbf22815ff", null ],
     [ "changeEvent", "class_form_user_queries.html#a10e99b999144fdf2cf62ebe242b67a93", null ],
     [ "newUserQuery", "class_form_user_queries.html#a0eb5ad2d1daf738b01fb35b45cf8f94f", null ],
-    [ "refreshData", "class_form_user_queries.html#a333579c5e85fda79b1c102f85fde69d4", null ]
+    [ "refreshData", "class_form_user_queries.html#a333579c5e85fda79b1c102f85fde69d4", null ],
+    [ "showQueryInfo", "class_form_user_queries.html#a7d479ae1136b39517751f1564e8c8284", null ]
 ];

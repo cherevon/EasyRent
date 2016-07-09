@@ -1,17 +1,18 @@
 #ifndef USERINTERFACE_H
 #define USERINTERFACE_H
 
+
 #include <QObject>
 
-class UserInterface : public QObject
+
+/** Пользовательский интерфейс
+ * @details Предоставляет основные механизмы для взаимодействия приложения с пользователем
+ */
+class UserInterface
 {
-    Q_OBJECT
 public:
-    explicit UserInterface(QObject *parent = 0);
-
-signals:
-
-public slots:
+    explicit UserInterface();
 };
+
 
 #endif // USERINTERFACE_H

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['formuserqueries',['FormUserQueries',['../class_form_user_queries.html',1,'']]]
+  ['dlgrealestatequeryeditor',['DlgRealEstateQueryEditor',['../class_dlg_real_estate_query_editor.html',1,'']]]
 ];

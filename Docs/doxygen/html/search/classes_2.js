@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mainwindow',['MainWindow',['../class_main_window.html',1,'']]]
+  ['formuserqueries',['FormUserQueries',['../class_form_user_queries.html',1,'']]]
 ];

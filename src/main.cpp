@@ -1,13 +1,12 @@
 #include <QApplication>
-#include "DlgRealEstateQueryEditor.h"
-#include "ResidentialRealEstateObject.h"
-#include "FormUserQueries.h"
+#include "MainWindow.h"
 #include <QSqlDatabase>
 #include <QSqlQuery>
 #include <QSqlError>
 #include <QMessageBox>
 #include <QObject>
-#include "RealEstateQueryStorage.h"
+#include <QStyleFactory>
+
 
 /// Инициализация базы данных
 void initializeDB()
@@ -123,6 +122,8 @@ int main(int argc, char* argv[])
 {
     QApplication *app = new QApplication(argc, argv);
 
+//    app->setStyle(QStyleFactory::create("fusion"));
+
     // устанавливаем соединение с базой данных
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName("EasyRent.db");
@@ -134,8 +135,8 @@ int main(int argc, char* argv[])
     initializeDB();
 
     // отображаем главное окно приложения
-    FormUserQueries* queries = new FormUserQueries();
-    queries->show();
+    MainWindow* wndMain = new MainWindow();
+    wndMain->show();
 
     return app->exec();
 }

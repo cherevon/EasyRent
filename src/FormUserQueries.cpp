@@ -42,8 +42,8 @@ void FormUserQueries::newUserQuery()
 
 void FormUserQueries::showQueryInfo(QModelIndex index)
 {
-    RealEstateQueryModel* model = qobject_cast<RealEstateQueryModel*>(ui->tvQueries->model());
-    ui->widget->setEditQuery( model->queries().at(index.row()) );
+    //RealEstateQueryModel* model = qobject_cast<RealEstateQueryModel*>(ui->tvQueries->model());
+    //ui->widget->setEditQuery( model->queries().at(index.row()) );
 }
 
 

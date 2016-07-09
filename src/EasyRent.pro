@@ -20,7 +20,11 @@ SOURCES += \
     ResidentialRealEstateObject.cpp \
     RealEstateQuery.cpp \
     RealEstateQueryModel.cpp \
-    DlgRealEstateQueryEditor.cpp
+    DlgRealEstateQueryEditor.cpp \
+    ProgressButton.cpp \
+    ApplicationCore.cpp \
+    UserInterface.cpp \
+    Task.cpp
 
 HEADERS += \
     MainWindow.h \
@@ -30,14 +34,17 @@ HEADERS += \
     RealEstateQuery.h \
     RealEstateQueryModel.h \
     DlgRealEstateQueryEditor.h \
-    RealEstateQueryStorage.h
+    RealEstateQueryStorage.h \
+    ProgressButton.h \
+    ApplicationCore.h \
+    UserInterface.h \
+    Task.h
 
 OTHER_FILES +=
 
 CONFIG += c++11
 
 FORMS += \
-    MainWindow.ui \
     FormUserQueries.ui \
     DlgRealEstateQueryEditor.ui
 

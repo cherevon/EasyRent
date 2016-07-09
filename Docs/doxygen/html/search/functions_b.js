@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['querytype',['queryType',['../class_real_estate_query.html#a3e23a3b2046d14e96a97f06d75a06f16',1,'RealEstateQuery']]]
+  ['operator_3c',['operator&lt;',['../class_real_estate_object.html#af3c92e5ea54a8c5d72d301c8fc0c24b6',1,'RealEstateObject']]],
+  ['operator_3e',['operator&gt;',['../class_real_estate_object.html#ad7dab5d556a4e05834d05c61183db1dc',1,'RealEstateObject']]]
 ];

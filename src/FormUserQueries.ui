@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,0,0">
+  <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,0">
    <item>
     <widget class="QTableView" name="tvQueries">
      <property name="selectionMode">
@@ -31,19 +31,8 @@
      </property>
     </widget>
    </item>
-   <item>
-    <widget class="DlgUserQueryEditor" name="widget" native="true"/>
-   </item>
   </layout>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>DlgUserQueryEditor</class>
-   <extends>QWidget</extends>
-   <header>DlgUserQueryEditor.h</header>
-   <container>1</container>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections/>
 </ui>

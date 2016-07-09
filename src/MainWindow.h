@@ -1,31 +1,36 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <QMainWindow>
+#include <QWidget>
 #include <QToolButton>
+#include <QStackedLayout>
+#include <QHBoxLayout>
+#include <QVBoxLayout>
+#include <QList>
 
-namespace Ui {
-class MainWindow;
-}
+#include "UserInterface.h"
 
-class MainWindow : public QMainWindow
+
+/** Главное окно приложения
+ */
+class MainWindow : public QWidget, public UserInterface
 {
     Q_OBJECT
 
+private:
+    /** Главный компоновщик элементов, располагаемых в окне
+     */
+    QHBoxLayout* fLayoutMain;
+    /** Компоновщик для расположения доступных пользователю задач
+     */
+    QVBoxLayout* fLayoutTasks;
+    /** Компоновщик для расположения виджетов запущенных задач
+     */
+    QStackedLayout* fLayoutWidgets;
+
 public:
     explicit MainWindow(QWidget *parent = 0);
-    ~MainWindow();
-
-    /** Добавить пользовательскую задачу
-     * @param newTask Добавляемая пользовательская задача
-     */
-    void addUserTask(QAction* newTask);
-
-protected:
-    void changeEvent(QEvent *e);
-
-private:
-    Ui::MainWindow *ui;
 };
+
 
 #endif // MAINWINDOW_H
